@@ -2977,25 +2977,21 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   .company-info-table th { border-bottom: none; padding-bottom: 4px; }
 }
 
-/* === NEWS STRIP（FV直下・お知らせバー） === */
-.news-strip { background: #fff; border-bottom: 1px solid var(--rule); padding: 18px var(--pad-x); }
-.news-strip-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 24px; }
-.news-strip-label { font-family: var(--font-en); font-weight: 800; font-size: 13px; letter-spacing: .16em; color: var(--navy); flex-shrink: 0; }
-.news-strip-list { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-.news-strip-item { display: flex; align-items: baseline; gap: 14px; min-width: 0; }
-.news-strip-date { font-family: var(--font-en); font-weight: 500; font-size: 12px; color: var(--ink-light); white-space: nowrap; }
-.news-strip-cat { font-size: 10px; font-weight: 700; letter-spacing: .04em; color: var(--navy); border: 1px solid currentColor; padding: 0 10px; border-radius: 999px; white-space: nowrap; }
-.news-strip-cat.is-note { color: var(--orange-h, #E64A1A); }
-.news-strip-title { font-size: 14px; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: color .3s; }
-.news-strip-item:hover .news-strip-title { color: var(--navy); }
-.news-strip-more { flex-shrink: 0; font-size: 13px; font-weight: 700; color: var(--navy); display: inline-flex; align-items: center; gap: 6px; transition: opacity .3s; }
-.news-strip-more:hover { opacity: .7; }
-.news-strip-more svg { width: 18px; height: 16px; }
-@media (max-width: 768px) {
-  .news-strip { padding: 14px var(--pad-x); }
-  .news-strip-inner { flex-wrap: wrap; gap: 10px 16px; }
-  .news-strip-title { white-space: normal; line-height: 1.5; }
-}
+/* === NEWS（お知らせ・掲載情報／独立セクション） === */
+.news-list { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--rule); }
+.news-item { display: block; padding: 26px 6px; border-bottom: 1px solid var(--rule); transition: background .3s; }
+a.news-item:hover { background: rgba(0,51,153,.04); }
+a.news-item:hover .news-title { color: var(--navy); }
+.news-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.news-date { font-family: var(--font-en); font-weight: 500; font-size: 13px; color: var(--ink-light); letter-spacing: .04em; }
+.news-cat { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--navy); border: 1px solid currentColor; padding: 1px 12px; border-radius: 999px; white-space: nowrap; }
+.news-cat.is-note { color: var(--orange-h, #E64A1A); }
+.news-title { font-size: clamp(15px, 1.6vw, 17px); font-weight: 700; line-height: 1.6; transition: color .3s; display: inline-flex; align-items: baseline; gap: 8px; }
+.news-title .ext { font-family: var(--font-en); font-size: 12px; color: var(--ink-light); font-weight: 500; }
+.news-more { max-width: 880px; margin: 32px auto 0; text-align: right; }
+.news-more a { font-size: 15px; font-weight: 700; color: var(--navy); display: inline-flex; align-items: center; gap: 8px; transition: opacity .3s; }
+.news-more a:hover { opacity: .7; }
+.news-more svg { width: 22px; height: 19px; }
 </style>
 
 <!-- Google tag (gtag.js) - GA4 -->
@@ -3115,37 +3111,6 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   </div>
 </section>
 
-<!-- ====================================================
-     01.5 NEWS STRIP（FV直下・お知らせバー）
-==================================================== -->
-<section class="news-strip" id="news">
-  <div class="news-strip-inner">
-    <span class="news-strip-label">NEWS</span>
-    <div class="news-strip-list">
-
-      <!-- ▼▼ note記事公開時：下のテンプレートを複製して一番上に追加（最新3件のみ掲載、古いものは削除しnews.htmlへ） ▼▼
-      <a class="news-strip-item" href="【note記事URL】?utm_source=hp&utm_medium=referral&utm_campaign=news" target="_blank" rel="noopener">
-        <span class="news-strip-date">2026.07.XX</span>
-        <span class="news-strip-cat is-note">note</span>
-        <span class="news-strip-title">【記事タイトル】</span>
-      </a>
-      ▲▲ テンプレートここまで ▲▲ -->
-
-      <a class="news-strip-item" href="https://keieisha-prime.com/interview/3046/" target="_blank" rel="noopener">
-        <span class="news-strip-date">2026.06.20</span>
-        <span class="news-strip-cat">メディア掲載</span>
-        <span class="news-strip-title">経営者インタビュー「社長のロマンを実現する、ノビシロ」が掲載されました</span>
-      </a>
-
-    </div>
-    <a href="news.html" class="news-strip-more">一覧を見る
-      <svg viewBox="0 0 28 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="24" y2="12"/>
-        <polyline points="18,6 24,12 18,18"/>
-      </svg>
-    </a>
-  </div>
-</section>
 <!-- ====================================================
      02. 3つの課題提示 ／ サクモフ式カード型
 ==================================================== -->
@@ -3880,6 +3845,55 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         <div class="phil-title">"卒業できる仕組み"をつくる</div>
         <p class="phil-txt">我々の目的は「依存させること」ではなく「自走させること」。仕組みが自走すれば、支援はもういらない。社長が"社長の仕事"に集中できる状態が、ゴールです。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     10.5 NEWS（お知らせ・掲載情報）
+==================================================== -->
+<section class="news-sec sucmof-sec" id="news">
+  <div class="sucmof-inner">
+    <div class="sucmof-sec-head rv" style="text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">NEWS</span>
+      <h2 class="sec-h2">お知らせ・掲載情報</h2>
+    </div>
+    <div class="news-list rv">
+
+      <!-- ▼▼ note記事公開時：下のテンプレートを複製して一番上に追加（最新3件のみ掲載、古いものは削除しnews.htmlへ） ▼▼
+      <a class="news-item" href="【note記事URL】?utm_source=hp&utm_medium=referral&utm_campaign=news" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.07.XX</span>
+          <span class="news-cat is-note">note</span>
+        </div>
+        <div class="news-title">【記事タイトル】<span class="ext">note ↗</span></div>
+      </a>
+      ▲▲ テンプレートここまで ▲▲ -->
+
+      <a class="news-item" href="https://prtimes.jp/main/html/rd/p/000000001.000182887.html" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.07.17</span>
+          <span class="news-cat">プレスリリース</span>
+        </div>
+        <div class="news-title">「社長・エース依存」から脱却。10人中10人が売れる営業の仕組み構築コンサルティングの本格展開を開始<span class="ext">PR TIMES ↗</span></div>
+      </a>
+
+      <a class="news-item" href="https://keieisha-prime.com/interview/3046/" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.06.20</span>
+          <span class="news-cat">メディア掲載</span>
+        </div>
+        <div class="news-title">経営者インタビュー「社長のロマンを実現する、ノビシロ」が掲載されました<span class="ext">経営者PRIME ↗</span></div>
+      </a>
+
+    </div>
+    <div class="news-more rv">
+      <a href="news.html">一覧を見る
+        <svg viewBox="0 0 28 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="24" y2="12"/>
+          <polyline points="18,6 24,12 18,18"/>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
