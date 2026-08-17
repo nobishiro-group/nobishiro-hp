@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>会員獲得の6つの型（守成クラブ千葉会場）</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R27R7TYYP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0R27R7TYYP');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xk3fb58yor");
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -29,7 +47,8 @@
   }
   .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
   p { text-wrap: pretty; }
-  h1, h2, .principle { text-wrap: balance; }
+  h1, h2 { text-wrap: balance; }
+  .principle { word-break: keep-all; }
 
   /* 写真プレースホルダー */
   .ph { background: #eef1f5; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 13px; font-weight: 500; }
@@ -61,7 +80,6 @@
   .kanshu .body { flex: 1; }
   .kanshu .who { display: inline-block; background: var(--navy); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; padding: 3px 12px; margin-bottom: 10px; }
   .kanshu p { font-size: 15px; }
-  .draft-note { font-size: 12px; color: var(--gray); margin-top: 6px; }
 
   /* 目次＝全体図 */
   .toc { padding: 44px 0 8px; }
@@ -155,25 +173,72 @@
 
   /* デスクトップ */
   @media (min-width: 1024px) {
-    .hero { padding: 150px 0 140px; }
-    .hero .label { font-size: 14px; }
+    body { font-size: 17.5px;
+           word-break: auto-phrase;  /* 日本語を文節で折る。「思／って」の分断を防ぐ */
+           text-wrap: pretty; }      /* 最終行が1語だけになる孤立行を避ける */
     br.sp-br { display: none; }
+
+    /* ファーストビュー：中央寄せの箱をやめ、画面左を基準にタイポで殴る。
+       ここだけ本文の左ライン（520px）から外すが、次が全幅写真なので比較が起きない */
+    .hero { padding: 140px 0 130px; }
+    .hero .wrap { max-width: none; margin: 0; padding: 0 clamp(80px, 5.6vw, 160px); }
+    .hero .label { font-size: 14px; letter-spacing: .2em; margin-bottom: 38px; }
+    .hero h1 { font-size: clamp(96px, 9.2vw, 190px); line-height: 1.02;
+               letter-spacing: -.05em; margin-bottom: 48px; }
+    /* 38em だと2段落とも句点で改行が落ちる。狭めると助詞の途中で割れ、
+       最終行が「しました。」だけの孤立行になる */
+    .hero .lead { font-size: 17px; max-width: 38em;
+                  word-break: auto-phrase;  /* 日本語を文節で折る */
+                  text-wrap: pretty; }      /* 最終行が1語だけになるのを避ける */
+    .hero .credit { max-width: 60em; }
+    .hero::after { font-size: clamp(560px, 48vw, 900px); right: -60px; bottom: -140px;
+                   color: rgba(255,255,255,.05); }
+
+    /* PCでの可読性：本文まわりを一段大きく */
+    .talk p { font-size: 17px; }
+    .case > p { font-size: 16.5px; }
+    .zentei p, .author p, .author .closing { font-size: 16.5px; }
+    .hint { font-size: 15.5px; }
+    .ng p { font-size: 16px; }
+    .why, .ed-note { font-size: 14.5px; }
+    .toc .t b { font-size: 16px; }
+    .toc .t small { font-size: 12.5px; }
 
     /* 例会写真は横長に */
     .keikai-photo img { aspect-ratio: 3 / 1; object-position: center 38%; }
 
     /* 全体図：前提は全幅、6STEPは2列 */
-    .toc ol { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; }
+    .toc ol { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
     .toc li:first-child { grid-column: 1 / -1; }
+    /* 2列にすると1列あたり300px弱。説明文の折り返しを減らすため余白を詰める */
+    .toc a { gap: 10px; padding: 14px 0; }
+    .toc .no { min-width: 3em; }
 
     /* STEPセクション：左レール（番号・見出し）＋右コンテンツの2カラム */
-    section[id^="step"] .wrap { max-width: 960px; display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px; }
+    section[id^="step"] .wrap { max-width: 1080px; display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px; }
     section[id^="step"] .step-head { grid-column: 1; grid-row: 1 / span 20; display: block; border-bottom: none; border-top: 2px solid var(--navy); padding-top: 16px; position: sticky; top: 48px; align-self: start; }
     section[id^="step"] .step-no { display: block; font-size: 96px; }
     section[id^="step"] .step-title { font-size: 22px; padding-bottom: 0; }
     section[id^="step"] .wrap > *:not(.step-head) { grid-column: 2; }
     section[id^="step"] .sub-label { justify-self: start; }
     section[id^="step"] .principle { margin-top: 0; }
+
+    /* 全区間で本文の左端を揃える（左200pxレール＋56pxガター＋本文）。
+       STEPだけ960pxグリッド・他は680px中央寄せだと、左端が3種類できてガタつく */
+    .kanshu .wrap, .toc .wrap, .zentei .wrap,
+    .chapter .wrap, .author .wrap {
+      max-width: 1080px;
+      display: grid;
+      grid-template-columns: 200px minmax(0, 1fr);
+      column-gap: 56px;
+    }
+    .kanshu .wrap > *, .toc .wrap > *, .zentei .wrap > *,
+    .chapter .wrap > *, .author .wrap > * { grid-column: 2; }
+    /* 見出しラベルは左レールへ逃がす */
+    .toc .wrap > h2, .author .wrap > h2,
+    .zentei .wrap > .tag, .chapter .wrap > .ch-label {
+      grid-column: 1; grid-row: 1; margin: 0; justify-self: start;
+    }
   }
 </style>
 </head>
@@ -203,7 +268,6 @@
       <div class="body">
         <p class="who">元吉代表より</p>
         <p>この型は、合わない人に無理に勧めるためのものではありません。守成をいいなと思ってくれる仲間を、丁寧に増やすためのものです。</p>
-    
       </div>
     </div>
   </div>
@@ -216,12 +280,12 @@
     <p class="toc-hint">タップすると各STEPに飛べます。今日必要なところだけ読んでください。</p>
     <ol>
       <li><a href="#zentei"><span class="no">前提</span><span class="t"><b>自分が良いと思っていないものは、売れない</b><small>まず守成のどこが良いか、自分の言葉にする</small></span><span class="arw">→</span></a></li>
-      <li><a href="#step1"><span class="no">STEP1</span><span class="t"><b>種まき</b><small>売り込む前に、興味の種だけ蒔く</small></span><span class="arw">→</span></a></li>
-      <li><a href="#step2"><span class="no">STEP2</span><span class="t"><b>誘う</b><small>頼むのは見学だけ。日程はその場で押さえる</small></span><span class="arw">→</span></a></li>
-      <li><a href="#step3"><span class="no">STEP3</span><span class="t"><b>例会までの連絡</b><small>3回の連絡で、ドタキャンを防ぐ</small></span><span class="arw">→</span></a></li>
-      <li><a href="#step4"><span class="no">STEP4</span><span class="t"><b>例会当日</b><small>最初に誰と繋ぐかで、印象が決まる</small></span><span class="arw">→</span></a></li>
-      <li><a href="#step5"><span class="no">STEP5</span><span class="t"><b>入会の後押し</b><small>良かった点を、本人の口で言ってもらう</small></span><span class="arw">→</span></a></li>
-      <li><a href="#step6"><span class="no">STEP6</span><span class="t"><b>後日のフォロー</b><small>本音は翌日に出る。押さずに続ける</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step1"><span class="no">STEP1</span><span class="t"><b>種まき</b><small>今日は蒔くだけ。刈り取ろうとしない</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step2"><span class="no">STEP2</span><span class="t"><b>誘う</b><small>スマホを開かせて、見学の日程を決める</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step3"><span class="no">STEP3</span><span class="t"><b>例会までの連絡</b><small>ドタキャンは前日までの放置が作る</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step4"><span class="no">STEP4</span><span class="t"><b>例会当日</b><small>最初に会った1人で、ゲストの1日が決まる</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step5"><span class="no">STEP5</span><span class="t"><b>入会の後押し</b><small>押すほど逃げる。本人の口から言ってもらう</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step6"><span class="no">STEP6</span><span class="t"><b>後日のフォロー</b><small>当日のNOは、まだNOじゃない</small></span><span class="arw">→</span></a></li>
     </ol>
   </div>
 </div>
@@ -252,7 +316,7 @@
       <span class="step-no">1</span>
       <h2 class="step-title"><small>STEP 1</small>種まき</h2>
     </div>
-    <p class="principle">売り込む前に、興味の「種」だけ蒔く。</p>
+    <p class="principle">今日は、蒔くだけ。<br>刈り取ろうとするから、断られる。</p>
 
     <p class="sub-label">基本トーク</p>
     <div class="talk">
@@ -283,7 +347,7 @@
       <span class="step-no">2</span>
       <h2 class="step-title"><small>STEP 2</small>誘う</h2>
     </div>
-    <p class="principle">頼むのは「入会」ではなく「見学」。日程は、その場で。</p>
+    <p class="principle">スマホを開かせて、<br>「見学」の日程を決める。<br>それ以上でもそれ以下でもない。</p>
 
     <p class="sub-label">基本トーク</p>
     <div class="talk">
@@ -313,7 +377,7 @@
       <span class="step-no">3</span>
       <h2 class="step-title"><small>STEP 3</small>例会までの連絡</h2>
     </div>
-    <p class="principle">申込から当日までの熱の低下を、接触の設計で防ぐ。ただし3回まで。</p>
+    <p class="principle">ドタキャンは、当日に生まれない。<br>前日までの放置が作る。連絡は3回。</p>
 
     <p class="sub-label">基本トーク（3回の型）</p>
     <div class="talk">
@@ -357,7 +421,7 @@
       <span class="step-no">4</span>
       <h2 class="step-title"><small>STEP 4</small>例会当日</h2>
     </div>
-    <p class="principle">ゲストの印象は、会の中身より「最初に話した1人」で決まる。</p>
+    <p class="principle">ゲストの1日は、<br>最初に会った1人で決まる。<br>だから、誰と繋ぐかを設計する。</p>
 
     <p class="sub-label">基本トーク</p>
     <div class="talk">
@@ -389,7 +453,7 @@
       <span class="step-no">5</span>
       <h2 class="step-title"><small>STEP 5</small>入会の後押し</h2>
     </div>
-    <p class="principle">こちらが説得しない。<br class="sp-br">良かった点を本人に言ってもらい、<br class="sp-br">その勢いで。</p>
+    <p class="principle">押すほど、逃げる。<br>最強のクロージングは<br>「どこが良かったですか？」の一言。</p>
 
     <p class="sub-label">基本トーク</p>
     <div class="talk">
@@ -398,7 +462,7 @@
       <p class="q">「今日繋がった人と深く付き合うためにも、次回から会員で来ませんか。手続きはサポートします」</p>
     </div>
 
-    <div class="ng"><span class="ng-label">NG</span><p>「持ち帰ってご検討ください」。熱はその場が最高値です。押しすぎも禁物、1回押して引く。</p></div>
+    <div class="ng"><span class="ng-label">NG</span><p>「持ち帰ってご検討ください」。熱はその場が最高値。持ち帰ると必ず冷めます。</p></div>
 
     <div class="case">
       <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
@@ -421,7 +485,7 @@
       <span class="step-no">6</span>
       <h2 class="step-title"><small>STEP 6</small>後日のフォロー</h2>
     </div>
-    <p class="principle">翌日に聞く。<br class="sp-br">その後は間隔を空けて、<br class="sp-br">押さずに続ける。</p>
+    <p class="principle">当日のNOは、まだNOじゃない。<br>勝負は翌日の一言から。</p>
 
     <p class="sub-label">基本トーク</p>
     <div class="talk">
@@ -438,7 +502,6 @@
     <div class="case">
       <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
       <p>例会の場は人が多く、ゲストは本音を言えません。だから翌日に聞く。千葉会場では当日入会しなかったゲストに翌日のフォローを入れていて、後日の入会は珍しくありません。</p>
-      <p class="ed-note">当日決まらない＝見送りではなく、翌日からが本番です。</p>
     </div>
     <div class="case">
       <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
@@ -484,6 +547,75 @@
 <footer>
   <div class="wrap"><p>守成クラブ千葉会場 会員向け資料　執筆・型化：今関貴文（株式会社ノビシロ）</p></div>
 </footer>
+
+<!-- 到達計測：どのSTEPまで読まれたかをGA4へ（section_view / 最大到達 / 完読・滞在） -->
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+
+  var SECTIONS = [
+    { id: 'zentei',  order: 1, name: '大前提' },
+    { id: 'step1',   order: 2, name: 'STEP1_種まき' },
+    { id: 'step2',   order: 3, name: 'STEP2_誘う' },
+    { id: 'step3',   order: 4, name: 'STEP3_例会までの連絡' },
+    { id: 'step4',   order: 5, name: 'STEP4_例会当日' },
+    { id: 'step5',   order: 6, name: 'STEP5_入会の後押し' },
+    { id: 'step6',   order: 7, name: 'STEP6_後日のフォロー' },
+    { id: 'matome',  order: 8, name: 'まとめ' }
+  ];
+
+  var deepest = { order: 0, name: 'ヒーローのみ' };
+  var start = Date.now();
+
+  // 各セクションが画面中央のラインを通過したら1回だけ計測
+  var fired = {};
+  function check() {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var line = vh * 0.5;
+    SECTIONS.forEach(function (s) {
+      if (fired[s.id]) return;
+      var el = document.getElementById(s.id);
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      if (r.top <= line && r.bottom >= line) {
+        fired[s.id] = true;
+        gtag('event', 'section_view', {
+          section_id: s.id,
+          section_name: s.name,
+          section_order: s.order
+        });
+        if (s.order > deepest.order) deepest = s;
+      }
+    });
+  }
+  window.__lpCheck = check; // 動作確認用
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { check(); ticking = false; });
+  }, { passive: true });
+  window.addEventListener('resize', check, { passive: true });
+  check();
+
+  // 離脱時に「最も深く読まれた地点」と滞在秒数を1回だけ送る
+  var sent = false;
+  function sendDepth() {
+    if (sent) return;
+    sent = true;
+    gtag('event', 'read_depth', {
+      deepest_section: deepest.name,
+      deepest_order: deepest.order,
+      engaged_seconds: Math.round((Date.now() - start) / 1000)
+    });
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') sendDepth();
+  });
+  window.addEventListener('pagehide', sendDepth);
+})();
+</script>
 
 </body>
 </html>
