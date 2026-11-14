@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コラム｜株式会社ノビシロ</title>
+<meta name="description" content="株式会社ノビシロのコラム。営業の仕組みづくりと組織づくりについて、現場で考えていることを書いています。">
+<link rel="canonical" href="https://nobishiro-group.com/column.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社ノビシロ">
+<meta property="og:title" content="コラム｜株式会社ノビシロ">
+<meta property="og:description" content="株式会社ノビシロのコラム。営業の仕組みづくりと組織づくりについて、現場で考えていることを書いています。">
+<meta property="og:url" content="https://nobishiro-group.com/column.html">
+<meta property="og:image" content="https://nobishiro-group.com/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#003399; --navy-h:#002277; --white:#FFF; --offwhite:#F5F5F2;
+  --orange:#FF5722; --orange-h:#E64A1A;
+  --orange-grad:linear-gradient(180deg,#FF6B40 0%,#FF5722 50%,#E64A1A 100%);
+  --ink:#111; --ink-mid:#444; --ink-light:#888; --rule:rgba(0,0,0,.10);
+  --font-ja:"Yu Gothic","遊ゴシック体","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  --font-en:"Inter","Helvetica Neue",Arial,sans-serif;
+  --pad-x:clamp(20px,5vw,80px);
+  --max-w:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-ja);color:var(--ink);background:var(--white);line-height:1.75;font-feature-settings:"palt";-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+
+/* ---------- イメージ確認用の注記（公開時は削除） ---------- */
+
+/* ---------- header (HP共通) ---------- */
+.site-header{position:sticky;top:0;height:96px;background:#fff;z-index:100;border-bottom:1px solid var(--rule)}
+.site-header .in{max-width:var(--max-w);height:100%;margin:0 auto;padding:0 var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.site-header .logo img{height:84px;width:auto}
+.gnav{display:flex;align-items:center;gap:32px;font-weight:700;font-size:15px}
+.gnav a.lk:hover{color:var(--navy)}
+.gnav a.lk.on{color:var(--navy);position:relative}
+.gnav a.lk.on::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;background:var(--orange);transform:skewX(-20deg)}
+.pill{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;transition:.3s}
+.pill.or{background:var(--orange-grad);color:#fff}
+.pill.or:hover{background:var(--orange-h)}
+.pill.nv{border:1.5px solid var(--navy);color:var(--navy)}
+.pill.nv:hover{background:var(--navy);color:#fff}
+@media (max-width:960px){.gnav .lk,.gnav .pill.nv{display:none}.gnav .pill.or{padding:10px 16px;font-size:13px}.site-header{height:72px}.site-header .logo img{height:60px}}
+
+/* ---------- breadcrumb ---------- */
+.crumb{max-width:var(--max-w);margin:0 auto;padding:20px var(--pad-x) 0;font-size:12px;color:var(--ink-light)}
+.crumb a:hover{color:var(--navy)}
+.crumb span{margin:0 8px}
+
+/* ---------- page hero ---------- */
+.phero{position:relative;overflow:hidden;background:var(--offwhite)}
+.phero::before{content:"";position:absolute;right:-10%;top:0;bottom:0;width:46%;background:var(--navy);clip-path:polygon(28% 0,100% 0,100% 100%,0 100%)}
+.phero .in{position:relative;max-width:var(--max-w);margin:0 auto;padding:40px var(--pad-x) 64px}
+.eyebrow{font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.18em;color:var(--orange);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--orange)}
+.phero h1{font-weight:900;font-size:clamp(34px,4.6vw,56px);line-height:1.25;letter-spacing:.02em}
+.phero p{margin-top:20px;max-width:34em;font-size:16px;color:var(--ink-mid);font-weight:500}
+.phero .count{position:absolute;right:var(--pad-x);bottom:40px;color:#fff;text-align:right;font-weight:700;font-size:13px;letter-spacing:.06em}
+.phero .count b{display:block;font-family:var(--font-en);font-weight:800;font-size:56px;line-height:1;letter-spacing:0}
+.phero .count b small{font-family:var(--font-ja);font-size:16px;margin-left:4px}
+@media (max-width:860px){
+  .phero::before{width:100%;right:0;top:auto;height:38%;clip-path:polygon(0 40%,100% 0,100% 100%,0 100%)}
+  .phero .in{padding:28px var(--pad-x) 110px}
+  .phero .count{bottom:22px}
+  .phero .count b{font-size:40px}
+}
+
+/* ---------- 共通：見出し ---------- */
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin:72px 0 24px}
+.sec-head .en{font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--orange)}
+.sec-head h2{position:relative;font-weight:900;font-size:clamp(20px,2.2vw,26px);padding-left:20px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:.22em;bottom:.22em;width:6px;background:var(--navy);transform:skewX(-14deg)}
+
+/* ---------- タグ ---------- */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 4px;border:1.5px solid var(--navy);color:var(--navy);font-size:12px;font-weight:700;background:#fff;line-height:1.4}
+.tag .ic{display:grid;place-items:center;width:20px;height:20px;background:var(--navy);color:#fff;flex:none}
+.tag .ic svg{width:13px;height:13px}
+
+/* ---------- 新着（大） ---------- */
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;border-top:2px solid var(--navy);border-bottom:1px solid var(--rule);padding:40px 0;transition:background .3s}
+.feature:hover .ttl{color:var(--navy)}
+.feature .ph{position:relative}
+.feature .ph img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:60% 30%;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+.feature .ph .new{position:absolute;left:6%;top:0;background:var(--orange);color:#fff;font-family:var(--font-en);font-weight:800;font-size:12px;letter-spacing:.14em;padding:6px 14px;transform:translateY(-50%)}
+.feature .co{font-size:14px;color:var(--ink-mid);font-weight:500;margin:16px 0 6px}
+.feature .co b{color:var(--ink);font-weight:900}
+.feature .ttl{font-weight:900;font-size:clamp(20px,2.2vw,26px);line-height:1.55;transition:color .3s}
+.feature .ex{margin-top:14px;font-size:14px;color:var(--ink-mid);line-height:1.9}
+.result{margin-top:22px;background:var(--offwhite);padding:16px 20px}
+.result .lb{font-size:12px;font-weight:700;color:var(--navy)}
+.result .lb small{color:var(--ink-light);font-weight:500;margin-left:8px}
+.result .row{display:flex;align-items:baseline;gap:12px;margin-top:4px;font-weight:700}
+.result .from{color:var(--ink-mid);font-size:15px}
+.result .arr{color:var(--orange);font-weight:900}
+.result .to{color:var(--navy);font-family:var(--font-en);font-weight:800;font-size:24px}
+.result small.u{font-family:var(--font-ja);font-size:12px;font-weight:700}
+.more{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-weight:700;font-size:14px;color:var(--navy)}
+.more::after{content:"";width:34px;height:2px;background:var(--orange);transition:width .3s}
+.feature:hover .more::after,.card:hover .more::after{width:52px}
+@media (max-width:860px){.feature{grid-template-columns:1fr;gap:24px;padding:32px 0}}
+
+/* ---------- 2列 ---------- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 48px}
+.card{display:block;border-top:2px solid var(--navy);padding-top:24px}
+.card .ph{aspect-ratio:16/10;clip-path:polygon(6% 0,100% 0,94% 100%,0 100%);overflow:hidden}
+.card .ttl{font-weight:900;font-size:18px;line-height:1.6;margin-top:14px}
+.card .co{font-size:13px;color:var(--ink-mid);margin-top:8px}
+.card .tags{margin-top:14px}
+/* 仮枠（公開時は表示しない） */
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+
+/* ---------- 掲載方針 ---------- */
+.policy{margin:72px 0 0;border-left:3px solid var(--navy);padding:4px 0 4px 22px;font-size:14px;color:var(--ink-mid);line-height:1.9}
+.policy b{color:var(--ink);display:block;margin-bottom:4px}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;background:var(--offwhite);overflow:hidden;margin-top:88px}
+.cta::before{content:"";position:absolute;right:-6%;top:0;bottom:0;width:36%;background:var(--orange);clip-path:polygon(40% 0,100% 0,100% 100%,0 100%);opacity:.95}
+.cta .in{position:relative;max-width:var(--max-w);margin:0 auto;padding:80px var(--pad-x);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.cta h2{font-weight:900;font-size:clamp(22px,2.8vw,34px);line-height:1.5}
+.cta h2 em{font-style:normal;color:var(--navy)}
+.cta p{margin-top:16px;color:var(--ink-mid);font-size:15px}
+.cta .btns{display:flex;flex-direction:column;gap:14px}
+.cta .pill{justify-content:center;padding:20px 32px;font-size:16px}
+.cta .pill.nv{background:#fff}
+@media (max-width:860px){.cta::before{width:100%;right:0;top:auto;height:30%;clip-path:polygon(0 40%,100% 0,100% 100%,0 100%)}.cta .in{grid-template-columns:1fr;padding:64px var(--pad-x) 120px}}
+
+/* ---------- footer (HP共通) ---------- */
+footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad-x) 48px}
+.ft-top{max-width:var(--max-w);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.18)}
+.ft-top img{width:260px}
+.ft-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;font-size:14px;font-weight:500}
+.ft-nav a:hover{opacity:.7}
+.copy{text-align:center;font-family:var(--font-en);font-size:12px;opacity:.7;margin-top:32px}
+@media (max-width:600px){.ft-top img{width:200px}}
+
+/* ---------- note ---------- */
+.notebox{margin-top:8px;border-top:2px solid var(--navy);padding-top:28px}
+.notebox .lead2{font-size:14px;color:var(--ink-mid);line-height:1.9;margin-bottom:28px}
+.nlist{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 28px}
+.ncard{display:block}
+.ncard .ph{aspect-ratio:1280/670;overflow:hidden;background:var(--offwhite)}
+.ncard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ncard:hover .ph img{transform:scale(1.03)}
+.ncard .meta{display:flex;gap:12px;align-items:center;margin-top:14px;font-size:12px;color:var(--ink-light);font-family:var(--font-en);font-weight:600}
+.ncard .meta .src{font-family:var(--font-ja);font-weight:700;color:var(--navy);border:1px solid var(--navy);padding:1px 8px}
+.ncard .ttl{font-weight:900;font-size:16px;line-height:1.65;margin-top:8px;transition:color .3s}
+.ncard:hover .ttl{color:var(--navy)}
+.nmore{margin-top:36px}
+.nmore a{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--navy)}
+.nmore a::after{content:"↗";font-family:var(--font-en)}
+.nmore a:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:860px){.nlist{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.nlist{grid-template-columns:1fr}}
+
+/* ---------- header nav（5項目） ---------- */
+.gnav a{white-space:nowrap}
+@media (max-width:1240px) and (min-width:961px){.gnav{gap:18px;font-size:14px}.site-header .pill{padding:11px 16px}.site-header .logo img{height:64px}}
+@media (max-width:1060px) and (min-width:961px){.gnav{gap:14px;font-size:13px}.site-header .pill{padding:10px 13px;font-size:13px}.site-header .logo img{height:56px}}
+.gnav-sp{display:none}
+@media (max-width:960px){
+  .gnav-sp{display:flex;position:sticky;top:72px;z-index:99;background:#fff;border-bottom:1px solid var(--rule);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 var(--pad-x);gap:22px;font-size:13px;font-weight:700;white-space:nowrap}
+  .gnav-sp::-webkit-scrollbar{display:none}
+  .gnav-sp a{padding:11px 0;flex:none}
+  .gnav-sp a.on{color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}
+}
+</style>
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R27R7TYYP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0R27R7TYYP');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xk3fb58yor");
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+</head>
+<body>
+
+<header class="site-header" id="hdr">
+  <div class="in">
+    <a class="logo" href="index.html"><img src="logo_navy.png" alt="株式会社ノビシロ" width="295" height="84"></a>
+    <nav class="gnav">
+      <a class="lk" href="index.html#solution-cta">サービス</a>
+      <a class="lk" href="cases.html">導入事例</a>
+      <a class="lk on" href="column.html">コラム</a>
+      <a class="lk" href="news.html">お知らせ</a>
+      <a class="lk" href="index.html#company-info">会社概要</a>
+      <a class="pill or" href="https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/" target="_blank" rel="noopener">無料診断を予約 →</a>
+      <a class="pill nv" href="contact.html">お問い合わせ →</a>
+    </nav>
+  </div>
+</header>
+<nav class="gnav-sp" aria-label="メニュー"><a href="index.html#solution-cta">サービス</a><a href="cases.html">導入事例</a><a class="on" href="column.html">コラム</a><a href="news.html">お知らせ</a><a href="index.html#company-info">会社概要</a></nav>
+
+<main>
+  <nav class="crumb" aria-label="パンくず"><a href="index.html">ホーム</a><span>&gt;</span>コラム</nav>
+
+  <section class="phero">
+    <div class="in">
+      <div class="eyebrow">COLUMN</div>
+      <h1>コラム</h1>
+      <p>営業の仕組みづくりと組織づくりについて、ノビシロが現場で考えていることを書いています。</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <!-- HPオリジナルのコラム記事を書いたら、この位置に「新着のコラム」の一覧を足す（note の枠より上）。手順はリポジトリの CLAUDE.md -->
+
+    <div class="sec-head"><span class="en">NOTE</span><h2>noteでも書いています</h2></div>
+    <div class="notebox">
+      <p class="lead2">外部サイトのnoteに、マガジン「ノビシロのない組織は、ない。」を書いています。記事はnoteのページで開きます。</p>
+      <div class="nlist">
+        <!-- note の新しい記事は、この下の先頭に a.ncard を1つ足す（3件まで。4件目からは一番古いものを消す） -->
+        <a class="ncard" href="https://note.com/nobishiro_ceo/n/ne30e76d0a9a4" target="_blank" rel="noopener">
+          <div class="ph"><img src="https://assets.st-note.com/production/uploads/images/334795689/rectangle_large_type_2_d1016dec98cce4e8134ef0bfb00c94eb.png?width=800" alt="" width="800" height="419" loading="lazy"></div>
+          <div class="meta"><span class="src">note ↗</span><span>2026.11.11</span></div>
+          <p class="ttl">「営業って、めちゃくちゃ楽しいですね！！」と後輩が言った日。私が営業の支援に力を注ぐ理由</p>
+        </a>
+      </div>
+      <p class="nmore"><a href="https://note.com/nobishiro_ceo/m/md3ba0e19a8c2" target="_blank" rel="noopener">マガジン「ノビシロのない組織は、ない。」をnoteで見る</a></p>
+    </div>
+  </div>
+
+  <section class="cta" id="cta">
+    <div class="in">
+      <div>
+        <h2>自社の営業や組織のこと、<br><em>まずは60分の無料診断</em>で。</h2>
+        <p>貴社の組織のノビシロを一緒に整理します。オンライン対応・契約義務なし。</p>
+      </div>
+      <div class="btns">
+        <a class="pill or" href="https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/" target="_blank" rel="noopener">無料診断を予約する →</a>
+        <a class="pill nv" href="contact.html">お問い合わせ →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="ft-top">
+    <a href="index.html"><img src="logo_white.png" alt="株式会社ノビシロ" width="260" height="74"></a>
+    <nav class="ft-nav">
+      <a href="index.html">トップ</a><a href="index.html#solution-cta">サービス</a><a href="cases.html">導入事例</a><a href="column.html">コラム</a><a href="news.html">お知らせ</a><a href="index.html#company-info">会社概要</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a><a href="site-policy.html">サイトポリシー</a>
+    </nav>
+  </div>
+  <p class="copy">© 2025-2026 Nobishiro Inc.</p>
+</footer>
+<script>
+/* CTAクリック計測（GA4イベント cta_click）。index.html と同じ仕組み */
+(function(){
+  function kind(href){
+    if(!href) return null;
+    if(href.indexOf('timerex.net')>-1) return 'booking';
+    if(href.indexOf('contact.html')>-1) return 'contact_form';
+    if(href.indexOf('note.com/')>-1) return 'sns_note';
+    return null;
+  }
+  function where(a){
+    var box=a.closest('header[id], section[id], footer');
+    if(!box) return 'other';
+    return box.id || box.tagName.toLowerCase();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a) return;
+    var t=kind(a.getAttribute('href'));
+    if(!t || typeof gtag!=='function') return;
+    gtag('event','cta_click',{
+      cta_type:t,
+      cta_location:where(a),
+      cta_text:(a.getAttribute('aria-label')||a.textContent||'').replace(/\s+/g,' ').replace('→','').trim().slice(0,40),
+      transport_type:'beacon'
+    });
+  },true);
+})();
+</script>
+</body>
+</html>
