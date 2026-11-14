@@ -2995,7 +2995,6 @@ a.news-item:hover .news-title { color: var(--navy); }
 .news-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
 .news-date { font-family: var(--font-en); font-weight: 500; font-size: 13px; color: var(--ink-light); letter-spacing: .04em; }
 .news-cat { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--navy); border: 1px solid currentColor; padding: 1px 12px; border-radius: 999px; white-space: nowrap; }
-.news-cat.is-note { color: var(--orange-h, #E64A1A); }
 .news-title { font-size: clamp(15px, 1.6vw, 17px); font-weight: 700; line-height: 1.6; transition: color .3s; display: inline-flex; align-items: baseline; gap: 8px; }
 .news-title .ext { font-family: var(--font-en); font-size: 12px; color: var(--ink-light); font-weight: 500; }
 .news-more { max-width: 880px; margin: 32px auto 0; text-align: right; }
@@ -3870,15 +3869,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     </div>
     <div class="news-list rv">
 
-      <!-- ▼▼ note記事公開時：下のテンプレートを複製して一番上に追加（最新3件のみ掲載、古いものは削除しnews.htmlへ） ▼▼
-      <a class="news-item" href="【note記事URL】?utm_source=hp&utm_medium=referral&utm_campaign=news" target="_blank" rel="noopener">
-        <div class="news-meta">
-          <span class="news-date">2026.07.XX</span>
-          <span class="news-cat is-note">note</span>
-        </div>
-        <div class="news-title">【記事タイトル】<span class="ext">note ↗</span></div>
-      </a>
-      ▲▲ テンプレートここまで ▲▲ -->
+      <!-- お知らせは会社の出来事（メディア掲載・テレビ出演・プレスリリース等）だけを載せる。note・コラムの記事は載せない -->
 
       <a class="news-item" href="https://the-next-generation.jp/2026/09/04/%e3%80%8c%e3%83%8e%e3%83%93%e3%82%b7%e3%83%ad%e3%80%8d%e3%81%ae%e3%81%aa%e3%81%84%e4%ba%ba%e3%81%af%e3%80%81%e3%81%84%e3%81%aa%e3%81%84/" target="_blank" rel="noopener">
         <div class="news-meta">
