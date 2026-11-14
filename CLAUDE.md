@@ -63,6 +63,7 @@
 - note の記事はお知らせ（news.html）には載せない
 - HPオリジナルのコラム記事は `column-<内容の英語>.html` で作る。1本目 `column-delegate-closing.html` を複製して中身を差し替える（記事の構造化データ Article・パンくず・著者欄・note への導線まで入っている）
 - 書き方：冒頭に「この記事の結論」の枠で答えを先に書く。数字や事例は note や一次資料に出ているものだけ使う。note の記事を別の切り口で書き直す時も、文章はそのまま写さない
+- 代表2名の構造化データ（Person）は `index.html` が正本。`@id` は `https://nobishiro-group.com/#tsuchiya-tomohiko` / `#imazeki-takafumi`、会社は `#organization`。コラムの `author` は同じ `@id` で参照し、name・image・sameAs も同じ値を書く。SNSやプロフィールページを足す時は、`index.html` の Person の `sameAs` と、全コラムの `author.sameAs` を一緒に直す
 - 記事を足したら `column.html` の「新着のコラム」の先頭に `a.citem` を1つ足し、`sitemap.xml` に `<url>`、`llms.txt` の主要ページに1行足す
 - トップページにはコラムの記事一覧を出さない。メニューの「コラム」から入れれば十分（2026-11-15 土屋さん決定）
 
