@@ -69,11 +69,17 @@
 
 ### メニューの並び
 
-ヘッダーとフッターのメニューは「サービス／導入事例／コラム／お知らせ／会社概要」の順（2026-11-14決定）。項目を変える時は、`index.html` の4箇所（ヘッダー2つ・スマホメニュー・フッター）、`cases.html`・`case-*.html`・`column.html` のヘッダー（PC用 `.gnav` とスマホ用 `.gnav-sp`）とフッター、ほかのページのフッターを全部直す。
+ヘッダーとフッターのメニューは「サービス／導入事例／コラム／お知らせ／会社概要」の順（2026-11-14決定）。リンク先は、サービス＝`index.html#solution-cta`、お知らせ＝`news.html`、会社概要＝`company.html`（2026-11-15 トップの会社概要と信念を company.html に移した）。項目を変える時は、`index.html` の4箇所（ヘッダー2つ・スマホメニュー・フッター）、`cases.html`・`case-*.html`・`column.html`・`company.html` のヘッダー（PC用 `.gnav` とスマホ用 `.gnav-sp`）とフッター、ほかのページのフッターを全部直す。
+
+### 代表者の経歴と会社情報
+
+- 経歴の全文・信念・会社情報の表は `company.html` が正本。トップ（`index.html` の `#profile`）は短縮版の経歴と company.html への導線だけ置く
+- 経歴や会社情報を直す時は、`company.html`・トップの短縮版・`index.html` の Person / Organization の構造化データ・`llms.txt` の基本情報を一緒に見る
+- トップの「導入事例」（`#case`、ノビシロ設立後の支援）と「プロジェクト事例」（`#achievements`、代表2名の過去実施事例）は別ブロックのまま混ぜない
 
 ### 代表者写真を差し替える
 
-4箇所を同時に直す：`index.html` の img（今関・土屋の2つ）と、Personの構造化データの `image`（2つ）。写真はWebP（1080×1080・品質84前後・100KB以下）に変換し、ファイル名は `imazeki-takafumi-nobishiro-coo.webp` / `tsuchiya-tomohiko-nobishiro-ceo.webp` を変えない。
+6箇所を同時に直す：`index.html` と `company.html` の img（今関・土屋の2つずつ）と、Personの構造化データの `image`（2つ）。写真はWebP（1080×1080・品質84前後・100KB以下）に変換し、ファイル名は `imazeki-takafumi-nobishiro-coo.webp` / `tsuchiya-tomohiko-nobishiro-ceo.webp` を変えない。
 
 ### 画像を足す
 
