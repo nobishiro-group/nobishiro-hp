@@ -1,3 +1,5 @@
 # nobishiro-hp
-動作確認 2026-11-14
-動作確認 2026-11-14 v2
+
+株式会社ノビシロのコーポレートサイト（https://nobishiro-group.com ）。`main` に入った変更はVercelが自動で公開する。
+
+直し方のルールは [CLAUDE.md](CLAUDE.md) にある。Claude Codeでこのフォルダを開けば自動で読み込まれる。
