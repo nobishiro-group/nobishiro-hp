@@ -4125,6 +4125,39 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   });
 })();
 
+/* CTAクリック計測（GA4イベント cta_click）。既存のGA4設定・contact_submitには触れない */
+(function(){
+  function kind(href){
+    if(!href) return null;
+    if(href.indexOf('timerex.net')>-1) return 'booking';
+    if(href==='#cta') return 'booking_scroll';
+    if(href.indexOf('contact.html')>-1) return 'contact_form';
+    if(href.indexOf('mailto:')===0) return 'mail';
+    if(href.indexOf('linkedin.com')>-1) return 'sns_linkedin';
+    if(href.indexOf('x.com/')>-1) return 'sns_x';
+    if(href.indexOf('note.com/')>-1) return 'sns_note';
+    return null;
+  }
+  function where(a){
+    if(a.closest('#mobileMenu')) return 'mobile_menu';
+    var box=a.closest('header[id], section[id], footer');
+    if(!box) return 'other';
+    return box.id || box.tagName.toLowerCase();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a) return;
+    var t=kind(a.getAttribute('href'));
+    if(!t || typeof gtag!=='function') return;
+    gtag('event','cta_click',{
+      cta_type:t,
+      cta_location:where(a),
+      cta_text:(a.getAttribute('aria-label')||a.textContent||'').replace(/\s+/g,' ').replace('→','').trim().slice(0,40),
+      transport_type:'beacon'
+    });
+  },true);
+})();
+
 /* smooth nav */
 (function(){
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
