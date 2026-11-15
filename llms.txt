@@ -25,8 +25,9 @@
 
 - [トップページ](https://nobishiro-group.com/): 課題・支援内容・4ステップ・導入事例・過去のプロジェクト事例・FAQ・代表者紹介（短縮版）
 - [会社概要](https://nobishiro-group.com/company.html): 私たちの信念「ノビシロのない組織は、ない。」、代表2名の経歴、会社情報（所在地・資本金・連絡先・取引銀行・顧問弁護士）
-- [導入事例](https://nobishiro-group.com/cases.html): 株式会社ノビシロがご支援したお客様へのインタビューの一覧（設立後の支援のみ）
+- [導入事例](https://nobishiro-group.com/cases.html): 株式会社ノビシロがご支援したお客様の事例の一覧。インタビューとご支援の記録をもとにまとめている（設立後の支援のみ。会社名を伏せた事例もある）
 - [株式会社エルシーエス様 導入事例](https://nobishiro-group.com/case-lcs.html): 代表取締役 岡 裕輔 様へのインタビュー。幹部2名と取り組んだ3ヶ月の幹部育成と、社長に判断を仰ぐ回数が減った変化
+- [広告・販促の会社様 導入事例](https://nobishiro-group.com/case-ad-agency.html): 会社名を伏せた事例。営業チームのヒアリングシートとトークスクリプトを型にし、支援開始2ヶ月で案件化率が20%から30%になった
 - [コラム](https://nobishiro-group.com/column.html): 営業の仕組みづくりと組織づくりについてのコラム。noteのマガジン「ノビシロのない組織は、ない。」の新着記事も掲載
 - [社長が商談に出続ける営業組織は、どこから任せればいいか](https://nobishiro-group.com/column-delegate-closing.html): 代表・土屋のコラム。全部の商談に同席するのをやめ、営業のプロセスごとに社長とメンバーの役割を分け直す任せ方
 - [お知らせ・掲載情報](https://nobishiro-group.com/news.html): メディア掲載、テレビ出演、プレスリリースの一覧

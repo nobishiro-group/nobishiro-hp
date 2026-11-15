@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="営業メンバー全員が同じヒアリングシートを使い、案件化率が上がったイメージ">
+  <rect width="1200" height="800" fill="#F5F5F2"/>
+  <polygon points="760,0 1200,0 1200,800 580,800" fill="#003399"/>
+  <polygon points="1050,0 1200,0 1200,800 1150,800" fill="#002277" opacity=".55"/>
+
+  <!-- 問いかけ -->
+  <g transform="translate(240 70)">
+    <rect x="0" y="0" width="300" height="96" rx="48" fill="#fff" stroke="#003399" stroke-width="6"/>
+    <polygon points="196,90 240,90 250,128" fill="#fff" stroke="#003399" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="194" y="84" width="48" height="10" fill="#fff"/>
+    <text x="150" y="62" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="36" font-weight="900" fill="#003399">本当の目的は？</text>
+  </g>
+
+  <!-- 営業メンバー3人（全員が同じシート） -->
+  <defs><g id="m">
+    <circle cx="70" cy="52" r="40" fill="#003399"/>
+    <path d="M0 220 Q0 112 70 112 Q140 112 140 220 Z" fill="#003399"/>
+    <rect x="82" y="128" width="80" height="104" rx="6" fill="#fff" stroke="#003399" stroke-width="5"/>
+    <rect x="82" y="128" width="80" height="20" rx="6" fill="#FF5722"/>
+    <g fill="#C9D2EA"><rect x="94" y="162" width="56" height="9" rx="4"/><rect x="94" y="182" width="44" height="9" rx="4"/><rect x="94" y="202" width="50" height="9" rx="4"/></g>
+  </g></defs>
+  <use href="#m" transform="translate(130 300)"/>
+  <use href="#m" transform="translate(300 380)"/>
+  <use href="#m" transform="translate(470 300)"/>
+
+  <!-- 案件化率のグラフ -->
+  <g transform="translate(780 170)">
+    <line x1="0" y1="430" x2="320" y2="430" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <rect x="30" y="290" width="100" height="140" fill="#fff"/>
+    <rect x="190" y="220" width="100" height="210" fill="#FF5722"/>
+    <text x="80" y="270" text-anchor="middle" font-family="Inter, Noto Sans JP, sans-serif" font-size="40" font-weight="900" fill="#fff">20%</text>
+    <text x="240" y="200" text-anchor="middle" font-family="Inter, Noto Sans JP, sans-serif" font-size="48" font-weight="900" fill="#fff">30%</text>
+    <g fill="none" stroke="#FF5722" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M60 120 C 120 60, 180 50, 240 60"/><polyline points="212,36 242,60 214,86"/>
+    </g>
+  </g>
+</svg>

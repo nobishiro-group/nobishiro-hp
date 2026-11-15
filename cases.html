@@ -111,7 +111,10 @@ img{max-width:100%;height:auto;display:block}
 @media (max-width:860px){.feature{grid-template-columns:1fr;gap:24px;padding:32px 0}}
 
 /* ---------- 2列 ---------- */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 48px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .co b{font-weight:500}
+@media (max-width:1000px){.grid{grid-template-columns:1fr 1fr}}
 .card{display:block;border-top:2px solid var(--navy);padding-top:24px}
 .card .ph{aspect-ratio:16/10;clip-path:polygon(6% 0,100% 0,94% 100%,0 100%);overflow:hidden}
 .card .ttl{font-weight:900;font-size:18px;line-height:1.6;margin-top:14px}
@@ -207,7 +210,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     <div class="in">
       <div class="eyebrow">CASE STUDY</div>
       <h1>導入事例</h1>
-      <p>ノビシロと取り組んだ社長と幹部の方に、ご依頼の背景と、取り組みのあとに起きた変化を伺いました。</p>    </div>
+      <p>ノビシロと取り組んだお客様の、ご依頼の背景と、取り組みのあとに起きた変化をご紹介します。</p>    </div>
   </section>
 
   <div class="wrap">
@@ -237,12 +240,33 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       </div>
     </a>
 
-    <!-- 2件目以降の事例は、新しい事例を上の feature に入れ、それまでの事例をこの下の grid に card として移す。
-         grid は事例が2件以上になったら「これまでの事例」の見出しと一緒に出す。手順はリポジトリの CLAUDE.md -->
+    <div class="sec-head" style="margin-top:72px"><span class="en">CASES</span><h2>事例一覧</h2></div>
+    <div class="grid">
+      <a class="card" href="case-lcs.html">
+        <div class="ph"><img src="case-lcs-oka-yusuke.webp" alt="株式会社エルシーエス 代表取締役 岡 裕輔 様" width="1200" height="692" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:60% 30%"></div>
+        <h3 class="ttl">社長が一人で背負う組織から、幹部が自ら判断する組織へ。3ヶ月の幹部育成で、社長に「自分の時間」が戻った</h3>
+        <p class="co">株式会社エルシーエス　代表取締役　岡 裕輔 様</p>
+        <div class="tags">
+          <span class="tag"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12"/><path d="M8 20h8M12 16v4M9 9l-2 1.5L9 12M15 9l2 1.5L15 12"/></svg></span>IT・ソフトウェア</span>
+          <span class="tag"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 L10 13 L14 16 L20 6"/><path d="M15 6h5v5"/></svg></span>幹部育成</span>
+        </div>
+        <span class="more">事例を読む</span>
+      </a>
+      <a class="card" href="case-ad-agency.html">
+        <div class="ph"><img src="case-ad-agency.svg" alt="営業メンバー全員が同じヒアリングシートを使い、案件化率が上がったイメージ図" width="1200" height="800" loading="lazy"></div>
+        <h3 class="ttl">「御用聞き」の営業から抜け出し、案件化率1.5倍。ヒアリングシートとトークスクリプトの型化</h3>
+        <p class="co">広告・販促の会社　<b>営業チーム様</b></p>
+        <div class="tags">
+          <span class="tag"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10v4h4l6 4V6L7 10z"/><path d="M17 9a4 4 0 0 1 0 6M19.5 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>広告・販促</span>
+          <span class="tag"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>ヒアリングの型</span>
+        </div>
+        <span class="more">事例を読む</span>
+      </a>
+    </div>
 
     <div class="policy">
       <b>掲載している事例について</b>
-      株式会社ノビシロの設立後にご支援したお客様に、インタビューした内容です。会社名とお名前は、掲載のご了承をいただいた範囲で載せています。
+      ご支援したお客様へのインタビューと、ご支援の記録をもとにまとめています。会社名とお名前は、掲載のご了承をいただいた範囲で載せています。会社名を伏せている事例もあります。
     </div>
   </div>
 
