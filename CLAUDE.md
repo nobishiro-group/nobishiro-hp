@@ -40,7 +40,7 @@
 
 | ファイル | やること |
 |---|---|
-| `news.html` | 一覧の先頭に1件足す（日付・カテゴリ・タイトル・説明文） |
+| `news.html` | 一覧（`.nlist`）の先頭に `a.nitem` を1つ足す（日付・カテゴリ・タイトル・説明文。外部記事は `class="nitem ext"`・別タブ・掲載先・↗） |
 | `index.html` | トップのお知らせ欄は最新の数件だけ並べる（2026-11時点で3件）。先頭に足して、一番古い1件を消す |
 | 自社ページの記事なら `news-YYYYMMDD-名前.html` ＋画像 | 既存の `news-20260828-chibaste.html` を複製して中身を差し替える |
 | `sitemap.xml` | 変えたページの `lastmod` を更新。記事ページを足したら `<url>` も足す |
@@ -69,7 +69,7 @@
 
 ### メニューの並び
 
-ヘッダーとフッターのメニューは「サービス／導入事例／コラム／お知らせ／会社概要」の順（2026-11-14決定）。リンク先は、サービス＝`index.html#solution-cta`、お知らせ＝`news.html`、会社概要＝`company.html`（2026-11-15 トップの会社概要と信念を company.html に移した）。項目を変える時は、`index.html` の4箇所（ヘッダー2つ・スマホメニュー・フッター）、`cases.html`・`case-*.html`・`column.html`・`company.html` のヘッダー（PC用 `.gnav` とスマホ用 `.gnav-sp`）とフッター、ほかのページのフッターを全部直す。
+ヘッダーとフッターのメニューは「サービス／導入事例／コラム／お知らせ／会社概要」の順（2026-11-14決定）。リンク先は、サービス＝`index.html#solution-cta`、お知らせ＝`news.html`、会社概要＝`company.html`（2026-11-15 トップの会社概要と信念を company.html に移した）。項目を変える時は、`index.html` の4箇所（ヘッダー2つ・スマホメニュー・フッター）、`cases.html`・`case-*.html`・`column.html`・`company.html`・`news.html` のヘッダー（PC用 `.gnav` とスマホ用 `.gnav-sp`）とフッター、ほかのページのフッターを全部直す。
 
 ### 代表者の経歴と会社情報
 
