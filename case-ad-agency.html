@@ -177,7 +177,19 @@ footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-0R27R7TYYP');
+  // 社内端末の除外：?internal=1 で開いた端末は traffic_type=internal（GA4のInternal Trafficフィルタで除外）。?internal=0 で解除
+  (function(){
+    var on = false;
+    try {
+      var q = new URLSearchParams(location.search).get('internal');
+      if (q === '1') { try { localStorage.setItem('nb_internal', '1'); } catch (e) {} document.cookie = 'nb_internal=1; path=/; max-age=31536000; SameSite=Lax'; }
+      if (q === '0') { try { localStorage.removeItem('nb_internal'); } catch (e) {} document.cookie = 'nb_internal=; path=/; max-age=0; SameSite=Lax'; }
+      var ls = null; try { ls = localStorage.getItem('nb_internal'); } catch (e) {}
+      on = q !== '0' && (ls === '1' || /(?:^|;\s*)nb_internal=1/.test(document.cookie));
+    } catch (e) {}
+    if (on) { gtag('set', { traffic_type: 'internal' }); gtag('config', 'G-0R27R7TYYP', { traffic_type: 'internal' }); }
+    else { gtag('config', 'G-0R27R7TYYP'); }
+  })();
 </script>
 
 <!-- Microsoft Clarity -->
