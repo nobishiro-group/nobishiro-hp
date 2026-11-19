@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://nobishiro-group.com/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/logo_navy.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/imazeki-takafumi-nobishiro-coo.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/company.html</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/logo_navy.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/imazeki-takafumi-nobishiro-coo.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/cases.html</loc>
@@ -41,30 +59,45 @@
     <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo-portrait.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/column-put-into-words.html</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo-portrait.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/column-playing-manager.html</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo-portrait.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/column-president-sales.html</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo-portrait.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/column-delegation.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo-portrait.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://nobishiro-group.com/news.html</loc>

@@ -8,5 +8,11 @@ Allow: /
 User-agent: Facebot
 Allow: /
 
+# 画像検索：イラストと白抜きロゴは画像検索に出さない（代表の名前で検索したときにイラストが並ぶため。2026-11-19）
+User-agent: Googlebot-Image
+Disallow: /illustrations/
+Disallow: /logo_white.png
+Allow: /
+
 # サイトマップの場所
 Sitemap: https://nobishiro-group.com/sitemap.xml
