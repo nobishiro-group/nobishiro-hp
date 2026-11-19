@@ -132,7 +132,7 @@ footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad
 .split .who{font-weight:700}
 .split .me{background:#FFF3EE}
 .split .me .who{color:var(--orange-h)}
-@media (max-width:600px){.split .hd{display:none}.split .row{grid-template-columns:1fr;padding:12px 0}.split .row span{padding:2px 14px}.split .st small{display:inline;margin-left:4px}}
+@media (max-width:600px){.split .hd{display:none}.split .row{grid-template-columns:1fr;padding:12px 0}.split .row span{padding:2px 14px}.split .row:not(.hd) span:nth-child(2)::before{content:"残す：";font-size:12px;font-weight:700;color:var(--ink-light)}.split .row:not(.hd) span:nth-child(3)::before{content:"手放す：";font-size:12px;font-weight:700;color:var(--ink-light)}.split .st small{display:inline;margin-left:4px}}
 @media (min-width:601px){.split .row{grid-template-columns:13em 18em 1fr}}
 .tasks{list-style:none;margin:8px 0 28px;display:grid;gap:10px}
 .tasks li{background:var(--offwhite);padding:14px 18px;font-size:15px;line-height:1.8}
