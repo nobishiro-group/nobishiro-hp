@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>営業の属人化診断（15問・約3分）｜株式会社ノビシロ</title>
+<meta name="description" content="15の質問に答えると、営業が社長やエースにどれだけ集中しているかと、「戦略の精度×実行の度合い」の今の状態がわかります。結果はその場で表示され、お名前やメールアドレスは不要です。">
+<link rel="canonical" href="https://nobishiro-group.com/diagnosis.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社ノビシロ">
+<meta property="og:title" content="営業の属人化診断（15問・約3分）｜株式会社ノビシロ">
+<meta property="og:description" content="15の質問に答えると、営業が社長やエースにどれだけ集中しているかと、「戦略の精度×実行の度合い」の今の状態がわかります。結果はその場で表示され、お名前やメールアドレスは不要です。">
+<meta property="og:url" content="https://nobishiro-group.com/diagnosis.html">
+<meta property="og:image" content="https://nobishiro-group.com/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#003399; --navy-h:#002277; --white:#FFF; --offwhite:#F5F5F2;
+  --orange:#FF5722; --orange-h:#E64A1A;
+  --orange-grad:linear-gradient(180deg,#FF6B40 0%,#FF5722 50%,#E64A1A 100%);
+  --navy-grad:linear-gradient(180deg,#1F4FA8 0%,#003399 50%,#002277 100%);
+  --ink:#111; --ink-mid:#444; --ink-light:#888; --rule:rgba(0,0,0,.10);
+  --font-ja:"Yu Gothic","遊ゴシック体","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  --font-en:"Inter","Helvetica Neue",Arial,sans-serif;
+  --font-serif:"Noto Serif JP","Hiragino Mincho ProN",serif;
+  --pad-x:clamp(20px,5vw,80px);
+  --max-w:1200px; --read-w:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-ja);color:var(--ink);background:var(--white);line-height:1.75;font-feature-settings:"palt";-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+
+/* ---------- header (HP共通) ---------- */
+.site-header{position:fixed;inset:0 0 auto 0;height:96px;background:#fff;z-index:100;border-bottom:1px solid var(--rule)}
+.site-header .in{max-width:var(--max-w);height:100%;margin:0 auto;padding:0 var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.site-header .logo img{height:84px;width:auto}
+.gnav{display:flex;align-items:center;gap:32px;font-weight:700;font-size:15px}
+.gnav a.lk:hover{color:var(--navy)}
+.pill{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;transition:.3s}
+.pill.or{background:var(--orange-grad);color:#fff}
+.pill.or:hover{background:var(--orange-h)}
+.pill.nv{border:1.5px solid var(--navy);color:var(--navy)}
+.pill.nv:hover{background:var(--navy);color:#fff}
+@media (max-width:960px){.gnav .lk,.gnav .pill.nv{display:none}.gnav .pill.or{padding:10px 16px;font-size:13px}.site-header{height:72px}.site-header .logo img{height:60px}}
+
+main{padding-top:96px}
+@media (max-width:960px){main{padding-top:72px}}
+
+/* ---------- breadcrumb ---------- */
+.crumb{max-width:var(--max-w);margin:0 auto;padding:20px var(--pad-x) 0;font-size:12px;color:var(--ink-light)}
+.crumb a:hover{color:var(--navy)}
+.crumb span{margin:0 8px}
+
+/* ---------- article ---------- */
+.article{max-width:var(--read-w);margin:0 auto;padding:48px var(--pad-x) 40px;box-sizing:content-box}
+.lead{font-size:17px;line-height:2;font-weight:500;padding-bottom:40px;border-bottom:1px solid var(--rule)}
+.sec{padding-top:64px}
+.sec-no{font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--orange)}
+.sec h2{position:relative;font-weight:900;font-size:clamp(22px,2.6vw,30px);line-height:1.5;margin:8px 0 28px;padding-left:22px}
+.sec h2::before{content:"";position:absolute;left:0;top:.28em;bottom:.28em;width:6px;background:var(--navy);transform:skewX(-14deg)}
+.sec p{margin-bottom:1.3em;font-size:16px}
+.q{display:flex;gap:12px;font-weight:700;color:var(--navy);margin:36px 0 18px;font-size:16px}
+.q::before{content:"Q";font-family:var(--font-en);font-weight:800;font-size:15px;color:#fff;background:var(--navy);width:28px;height:28px;flex:none;display:grid;place-items:center;transform:translateY(-1px)}
+.ans p{padding-left:40px;position:relative}
+.ans p:first-child::before{content:"岡様";position:absolute;left:0;top:.35em;font-size:11px;font-weight:700;color:var(--ink-light);letter-spacing:.04em}
+.pull{margin:44px 0;padding:28px 0 28px 0;border-top:2px solid var(--navy);border-bottom:1px solid var(--rule);font-family:var(--font-serif);font-weight:900;font-size:clamp(20px,2.4vw,26px);line-height:1.7;color:var(--navy)}
+.pull small{display:block;margin-top:10px;font-family:var(--font-ja);font-size:13px;font-weight:500;color:var(--ink-light)}
+.rinen{list-style:none;margin:8px 0 28px;border-left:3px solid var(--orange);padding:6px 0 6px 22px}
+.rinen li{font-weight:700;font-size:16px;padding:6px 0}
+.rinen li span{font-family:var(--font-en);color:var(--orange);font-weight:800;margin-right:12px}
+.data{margin:32px 0 8px;background:var(--offwhite);padding:26px 28px;position:relative}
+.data .lb{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--navy);padding:4px 12px;margin-bottom:14px}
+.data .row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;text-align:center;margin-top:8px}
+.data .from{font-size:15px;color:var(--ink-mid);font-weight:700}
+.data .to{font-size:22px;color:var(--navy);font-weight:900;font-family:var(--font-en)}
+.data .to small,.data .from small{font-family:var(--font-ja);font-size:13px;font-weight:700}
+.data .arr{color:var(--orange);font-size:22px;font-weight:900}
+.data .note{font-size:12px;color:var(--ink-light);margin-top:14px}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;background:var(--offwhite);overflow:hidden;margin-top:72px}
+.cta::before{content:"";position:absolute;right:-6%;top:0;bottom:0;width:36%;background:var(--orange);clip-path:polygon(40% 0,100% 0,100% 100%,0 100%);opacity:.95}
+.cta .in{position:relative;max-width:var(--max-w);margin:0 auto;padding:80px var(--pad-x);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.cta h2{font-weight:900;font-size:clamp(22px,2.8vw,34px);line-height:1.5}
+.cta h2 em{font-style:normal;color:var(--navy)}
+.cta p{margin-top:16px;color:var(--ink-mid);font-size:15px}
+.cta .btns{display:flex;flex-direction:column;gap:14px}
+.cta .pill{justify-content:center;padding:20px 32px;font-size:16px}
+.cta .pill.nv{background:#fff}
+@media (max-width:860px){.cta::before{width:100%;right:0;top:auto;height:30%;clip-path:polygon(0 40%,100% 0,100% 100%,0 100%)}.cta .in{grid-template-columns:1fr;padding:64px var(--pad-x) 120px}}
+
+/* ---------- footer (HP共通) ---------- */
+footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad-x) 48px}
+.ft-top{max-width:var(--max-w);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.18)}
+.ft-top img{width:260px}
+.ft-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;font-size:14px;font-weight:500}
+.ft-nav a:hover{opacity:.7}
+.copy{text-align:center;font-family:var(--font-en);font-size:12px;opacity:.7;margin-top:32px}
+@media (max-width:600px){.ft-top img{width:200px}}
+
+/* ---------- コラム記事 ---------- */
+.ahero{position:relative;overflow:hidden;background:var(--offwhite)}
+.ahero::before{content:"";position:absolute;right:-10%;top:0;bottom:0;width:30%;background:var(--navy);clip-path:polygon(40% 0,100% 0,100% 100%,0 100%)}
+.ahero .in{position:relative;max-width:var(--read-w);margin:0 auto;padding:40px var(--pad-x) 56px;box-sizing:content-box}
+.eyebrow{font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.18em;color:var(--orange);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--orange)}
+.ahero h1{font-weight:900;font-size:clamp(26px,3.4vw,40px);line-height:1.5;letter-spacing:.01em;max-width:19em;word-break:auto-phrase}
+.sec h2{word-break:auto-phrase}
+.ameta{margin-top:24px;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:var(--ink-mid);font-weight:500}
+.ameta time{font-family:var(--font-en);font-weight:700;color:var(--navy)}
+@media (max-width:860px){.ahero::before{width:24%;right:-8%}}
+@media (max-width:600px){.ahero::before{width:14%;right:-6%}.ahero .in{padding-right:calc(var(--pad-x) + 8%)}.ameta{flex-direction:column;gap:2px}}
+.answer{border:2px solid var(--navy);padding:26px 28px 24px;position:relative;margin-top:8px}
+.answer .lb{position:absolute;top:-13px;left:20px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;padding:3px 12px}
+.answer p{font-size:17px;font-weight:700;line-height:1.9}
+.loop{list-style:none;margin:28px 0 32px;counter-reset:lp;display:grid;gap:10px}
+.loop li{counter-increment:lp;position:relative;background:var(--offwhite);padding:14px 18px 14px 56px;font-weight:700;font-size:15px}
+.loop li::before{content:counter(lp);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:26px;height:26px;display:grid;place-items:center;background:var(--navy);color:#fff;font-family:var(--font-en);font-size:13px;font-weight:800}
+.loop li:not(:last-child)::after{content:"↓";position:absolute;left:24px;bottom:-15px;color:var(--orange);font-weight:900;font-size:13px;z-index:1}
+.split{margin:28px 0 32px;border-top:2px solid var(--navy)}
+.split .row{display:grid;grid-template-columns:8.5em 13em 1fr;border-bottom:1px solid var(--rule)}
+.split .row span{padding:16px 14px;font-size:15px;line-height:1.7}
+.split .hd span{font-size:12px;font-weight:700;color:var(--ink-light);padding:10px 14px}
+.split .st{font-weight:900;color:var(--navy)}
+.split .st small{display:block;font-size:12px;font-weight:700}
+.split .who{font-weight:700}
+.split .me{background:#FFF3EE}
+.split .me .who{color:var(--orange-h)}
+@media (max-width:600px){.split .hd{display:none}.split .row{grid-template-columns:1fr;padding:12px 0}.split .row span{padding:2px 14px}.split .st small{display:inline;margin-left:4px}}
+.tonote a{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--navy)}
+.tonote a::after{content:"↗";font-family:var(--font-en)}
+.tonote a:hover{text-decoration:underline;text-underline-offset:4px}
+.author{margin-top:72px;display:flex;gap:24px;align-items:flex-start;border-top:2px solid var(--navy);padding-top:28px}
+.author img{width:96px;height:96px;object-fit:cover;border-radius:50%;flex:none}
+.author .lb{font-size:12px;font-weight:700;color:var(--orange)}
+.author .nm{font-weight:900;font-size:18px;margin-top:2px}
+.author .nm small{font-size:13px;font-weight:500;color:var(--ink-mid);margin-left:12px}
+.author .bio{margin-top:8px;font-size:14px;color:var(--ink-mid);line-height:1.9}
+@media (max-width:600px){.author{flex-direction:column;gap:16px}.author .nm small{display:block;margin-left:0}}
+.back{margin-top:48px}
+.back a{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--navy)}
+.back a::before{content:"←";font-family:var(--font-en)}
+.back a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.faq{margin-top:8px}
+.faq .qa{border-top:1px solid var(--rule);padding:22px 0 6px}
+.faq .qa:last-child{border-bottom:1px solid var(--rule)}
+.faq h3{position:relative;font-weight:900;font-size:17px;line-height:1.7;padding-left:2em;margin-bottom:10px}
+.faq h3::before{content:"Q.";position:absolute;left:0;color:var(--navy);font-family:var(--font-en);font-weight:800}
+.faq .qa p{position:relative;padding-left:2em;font-size:16px}
+.faq .qa p::before{content:"A.";position:absolute;left:0;color:var(--orange);font-family:var(--font-en);font-weight:800}
+.related ul{list-style:none;display:grid;gap:10px}
+.related a{display:flex;align-items:center;gap:14px;background:var(--offwhite);padding:16px 18px;font-weight:700;font-size:15px;line-height:1.6}
+.related a:hover{color:var(--navy)}
+.related a::after{content:"→";margin-left:auto;color:var(--orange);font-family:var(--font-en);font-weight:800}
+.related .k{flex:none;font-size:12px;font-weight:700;color:#fff;background:var(--navy);padding:2px 10px}
+@media (max-width:600px){.related a{flex-wrap:wrap;gap:6px 10px}}
+
+/* ---------- header nav（5項目） ---------- */
+.gnav a{white-space:nowrap}
+@media (max-width:1240px) and (min-width:961px){.gnav{gap:18px;font-size:14px}.site-header .pill{padding:11px 16px}.site-header .logo img{height:64px}}
+@media (max-width:1060px) and (min-width:961px){.gnav{gap:14px;font-size:13px}.site-header .pill{padding:10px 13px;font-size:13px}.site-header .logo img{height:56px}}
+.gnav-sp{display:none}
+@media (max-width:960px){
+  .gnav-sp{display:flex;position:sticky;top:72px;z-index:99;background:#fff;border-bottom:1px solid var(--rule);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 var(--pad-x);gap:22px;font-size:13px;font-weight:700;white-space:nowrap}
+  .gnav-sp::-webkit-scrollbar{display:none}
+  .gnav-sp a{padding:11px 0;flex:none}
+  .gnav-sp a.on{color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}
+}
+
+/* ---------- 営業の属人化診断 ---------- */
+.dg{max-width:var(--read-w);margin:0 auto;padding:40px var(--pad-x) 24px;box-sizing:content-box}
+.dg-intro p{font-size:16px;margin-bottom:1.1em}
+.dg-axes{list-style:none;margin:24px 0 8px;display:grid;gap:10px}
+.dg-axes li{background:var(--offwhite);padding:16px 18px;font-size:15px;line-height:1.8}
+.dg-axes b{display:block;color:var(--navy);font-weight:900;font-size:15px;margin-bottom:2px}
+.dg-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 32px;font-size:14px;font-weight:700;color:var(--ink-mid)}
+.dg-meta span::before{content:"";display:inline-block;width:8px;height:8px;background:var(--orange);margin-right:8px;transform:translateY(-1px)}
+.dg-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:18px 40px;border:none;border-radius:999px;background:var(--orange-grad);color:#fff;font-family:var(--font-ja);font-weight:700;font-size:17px;cursor:pointer;transition:.3s}
+.dg-btn:hover{background:var(--orange-h)}
+.dg-btn:disabled{opacity:.4;cursor:not-allowed}
+.dg-btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.dg-btn.ghost:hover{background:var(--navy);color:#fff}
+.ahero .dg-btn{margin-top:28px;padding:16px 36px;font-size:16px}
+.dg-note{font-size:13px;color:var(--ink-light);margin-top:16px}
+
+/* 進捗 */
+.dg-prog{position:sticky;top:96px;z-index:5;background:#fff;padding:14px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+@media (max-width:960px){.dg-prog{top:118px}}
+.dg-prog .bar{height:8px;background:var(--offwhite);border-radius:99px;overflow:hidden}
+.dg-prog .bar i{display:block;height:100%;width:0;background:var(--orange-grad);transition:width .4s}
+.dg-prog .txt{display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:var(--ink-mid);margin-top:8px}
+.dg-prog .txt b{color:var(--navy);font-family:var(--font-en)}
+
+/* 設問 */
+.dg-q{padding:28px 0 26px;border-bottom:1px solid var(--rule)}
+.dg-q .no{font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--orange)}
+.dg-q .st{font-weight:700;font-size:17px;line-height:1.8;margin:4px 0 16px}
+.dg-q .opts{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.dg-q .opts input{position:absolute;opacity:0;pointer-events:none}
+.dg-q .opts label{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;padding:12px 4px 10px;border:1.5px solid var(--rule);border-radius:6px;background:#fff;transition:.2s;text-align:center}
+.dg-q .opts label .n{font-family:var(--font-en);font-weight:800;font-size:18px;color:var(--ink-mid)}
+.dg-q .opts label .t{font-size:11px;line-height:1.4;color:var(--ink-light);font-weight:700;min-height:2.8em}
+.dg-q .opts label:hover{border-color:var(--navy)}
+.dg-q .opts input:checked+label{background:var(--navy);border-color:var(--navy)}
+.dg-q .opts input:checked+label .n,.dg-q .opts input:checked+label .t{color:#fff}
+.dg-q .opts input:focus-visible+label{outline:3px solid var(--orange);outline-offset:2px}
+@media (max-width:600px){.dg-q .opts{gap:5px}.dg-q .opts label{padding:10px 2px 8px}.dg-q .opts label .t{font-size:10px}}
+.dg-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:32px}
+.dg-nav .dg-btn{padding:16px 32px;font-size:16px}
+.dg-nav .back{background:none;border:none;font-family:var(--font-ja);font-weight:700;font-size:14px;color:var(--navy);cursor:pointer}
+.dg-nav .back:disabled{visibility:hidden}
+
+/* 結果 */
+.dg-res .lb{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--navy);padding:4px 12px}
+.dg-res h2.type{font-weight:900;font-size:clamp(28px,3.6vw,40px);line-height:1.4;color:var(--navy);margin:12px 0 8px}
+.dg-res .catch{font-size:17px;font-weight:700;line-height:1.9}
+.dg-map{margin:32px 0 8px;display:grid;grid-template-columns:1fr;gap:8px}
+.dg-map svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+.dg-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0 8px}
+.dg-scores div{background:var(--offwhite);padding:16px 12px;text-align:center}
+.dg-scores small{display:block;font-size:12px;font-weight:700;color:var(--ink-mid)}
+.dg-scores b{font-family:var(--font-en);font-weight:800;font-size:30px;color:var(--navy)}
+.dg-scores b span{font-size:14px;margin-left:2px}
+@media (max-width:600px){.dg-scores{gap:6px}.dg-scores div{padding:14px 4px}.dg-scores small{font-size:11px}.dg-scores b{font-size:26px}}
+.dg-formula{margin:10px 0 4px;border:2px solid var(--navy);padding:20px 22px;text-align:center}
+.dg-formula .eq{font-weight:900;font-size:clamp(17px,2.2vw,22px);line-height:1.7}
+.dg-formula .eq em{font-style:normal;font-family:var(--font-en);color:var(--orange-h)}
+.dg-formula p{font-size:14px;color:var(--ink-mid);margin-top:8px;line-height:1.8;text-align:left}
+.dg-block{margin-top:40px}
+.dg-block h3{position:relative;font-weight:900;font-size:20px;line-height:1.5;margin-bottom:14px;padding-left:20px}
+.dg-block h3::before{content:"";position:absolute;left:0;top:.25em;bottom:.25em;width:5px;background:var(--navy);transform:skewX(-14deg)}
+.dg-block p{font-size:16px;margin-bottom:1em}
+.dg-step{background:#FFF3EE;border-left:4px solid var(--orange);padding:18px 20px;font-weight:700;font-size:16px;line-height:1.9}
+.dg-quotes{list-style:none;display:grid;gap:10px}
+.dg-quotes li{background:var(--offwhite);padding:14px 18px;font-size:15px;line-height:1.8}
+.dg-quotes li span{display:block;font-size:13px;font-weight:700;color:var(--orange-h);margin-top:4px}
+
+/* レポートの申込み */
+.dg-form{margin-top:48px;background:var(--offwhite);padding:clamp(24px,4vw,40px)}
+.dg-form h3{font-weight:900;font-size:clamp(20px,2.4vw,26px);line-height:1.5}
+.dg-form .sub{font-size:15px;color:var(--ink-mid);margin:10px 0 24px}
+.dg-form .fg{margin-bottom:18px}
+.dg-form label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.dg-form .req,.dg-form .opt{font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;margin-left:6px}
+.dg-form .req{color:#fff;background:var(--orange)}
+.dg-form .opt{color:var(--ink-light);background:var(--rule)}
+.dg-form input[type=text],.dg-form input[type=email]{width:100%;padding:14px 16px;font-family:var(--font-ja);font-size:16px;border:1px solid var(--rule);border-radius:4px;background:#fff}
+.dg-form input:focus{outline:none;border-color:var(--navy)}
+.dg-form .notice{font-size:13px;color:var(--ink-mid);line-height:1.85;margin:8px 0 24px}
+.dg-form .notice a{color:var(--navy);text-decoration:underline}
+.dg-form .btns{display:flex;flex-direction:column;gap:12px;max-width:520px}
+.dg-form .btns .dg-btn{width:100%;padding:18px 24px;font-size:16px}
+@media (max-width:600px){.dg-form .btns .dg-btn{padding:16px 12px;font-size:15px}}
+.dg-form .err{display:none;margin-top:16px;font-size:14px;color:#C53D14;background:rgba(255,87,34,.08);padding:14px 16px;border-radius:4px}
+.dg-form .err a{color:var(--navy);text-decoration:underline}
+.dg-done{display:none;margin-top:48px;background:#fff;border:2px solid var(--navy);padding:clamp(24px,4vw,40px)}
+.dg-done h3{font-weight:900;font-size:22px;color:var(--navy);margin-bottom:12px}
+.dg-done p{font-size:16px;margin-bottom:1em}
+.dg-done a{color:var(--navy);font-weight:700;text-decoration:underline}
+.dg-retry{margin-top:40px;text-align:center}
+.dg-retry button{background:none;border:none;font-family:var(--font-ja);font-weight:700;font-size:14px;color:var(--navy);cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.dg-foot{font-size:13px;color:var(--ink-light);margin-top:24px;line-height:1.8}
+[hidden]{display:none!important}
+</style>
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R27R7TYYP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // 社内端末の除外：?internal=1 で開いた端末は traffic_type=internal（GA4のInternal Trafficフィルタで除外）。?internal=0 で解除
+  (function(){
+    var on = false;
+    try {
+      var q = new URLSearchParams(location.search).get('internal');
+      if (q === '1') { try { localStorage.setItem('nb_internal', '1'); } catch (e) {} document.cookie = 'nb_internal=1; path=/; max-age=31536000; SameSite=Lax'; }
+      if (q === '0') { try { localStorage.removeItem('nb_internal'); } catch (e) {} document.cookie = 'nb_internal=; path=/; max-age=0; SameSite=Lax'; }
+      var ls = null; try { ls = localStorage.getItem('nb_internal'); } catch (e) {}
+      on = q !== '0' && (ls === '1' || /(?:^|;\s*)nb_internal=1/.test(document.cookie));
+    } catch (e) {}
+    if (on) { gtag('set', { traffic_type: 'internal' }); gtag('config', 'G-0R27R7TYYP', { traffic_type: 'internal' }); }
+    else { gtag('config', 'G-0R27R7TYYP'); }
+  })();
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xk3fb58yor");
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage", "name": "営業の属人化診断", "description": "15の質問に答えると、営業が社長やエースにどれだけ集中しているかと、「戦略の精度×実行の度合い」の今の状態がわかります。結果はその場で表示され、お名前やメールアドレスは不要です。", "url": "https://nobishiro-group.com/diagnosis.html", "inLanguage": "ja", "publisher": {"@type": "Organization", "@id": "https://nobishiro-group.com/#organization", "name": "株式会社ノビシロ", "url": "https://nobishiro-group.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://nobishiro-group.com/"}, {"@type": "ListItem", "position": 2, "name": "営業の属人化診断", "item": "https://nobishiro-group.com/diagnosis.html"}]}
+</script>
+</head>
+<body>
+
+<header class="site-header" id="hdr">
+  <div class="in">
+    <a class="logo" href="index.html"><img src="logo_navy.png" alt="株式会社ノビシロ" width="295" height="84"></a>
+    <nav class="gnav">
+      <a class="lk" href="index.html#solution-cta">サービス</a>
+      <a class="lk" href="cases.html">導入事例</a>
+      <a class="lk" href="column.html">コラム</a>
+      <a class="lk" href="news.html">お知らせ</a>
+      <a class="lk" href="company.html">会社概要</a>
+      <a class="pill or" href="https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/" target="_blank" rel="noopener">無料診断を予約 →</a>
+      <a class="pill nv" href="contact.html">お問い合わせ →</a>
+    </nav>
+  </div>
+</header>
+<nav class="gnav-sp" aria-label="メニュー"><a href="index.html#solution-cta">サービス</a><a href="cases.html">導入事例</a><a href="column.html">コラム</a><a href="news.html">お知らせ</a><a href="company.html">会社概要</a></nav>
+
+<main>
+  <nav class="crumb" aria-label="パンくず"><a href="index.html">ホーム</a><span>&gt;</span>営業の属人化診断</nav>
+
+  <section class="ahero">
+    <div class="in">
+      <div class="eyebrow">DIAGNOSIS</div>
+      <h1>営業の属人化診断</h1>
+      <p class="ameta"><span>全15問・約3分</span><span>結果はその場で表示（お名前やメールアドレスは不要）</span></p>
+      <button type="button" class="dg-btn" id="dg-hero-start">診断を始める →</button>
+    </div>
+  </section>
+
+  <div class="dg" id="dg">
+    <section class="dg-intro" id="dg-intro">
+      <p>15の質問に答えると、自社の営業が今どの状態にあるかを2つの軸で示します。</p>
+      <ul class="dg-axes">
+        <li><b>縦軸：営業の属人化</b>売上や大事な判断が社長・エースに集中しているか。それとも全員が一定の水準で売れるか。</li>
+        <li><b>横軸：戦略の精度×実行の度合い</b>やることを正しく決めているか（戦略の精度）と、決めたことをやり切っているか（実行の度合い）の掛け算です。どちらかが低いと成果は伸びません。</li>
+      </ul>
+      <div class="dg-meta"><span>全15問</span><span>約3分</span><span>結果はその場で表示</span></div>
+      <button type="button" class="dg-btn" id="dg-start">診断を始める →</button>
+      <p class="dg-note">「当てはまる」から「当てはまらない」までの5段階で、今の実態に近いものを選んでください。</p>
+    </section>
+
+    <section id="dg-quiz" hidden>
+      <div class="dg-prog" aria-live="polite">
+        <div class="bar"><i id="dg-bar"></i></div>
+        <div class="txt"><span id="dg-pct"></span><span id="dg-rem"></span></div>
+      </div>
+      <div id="dg-page"></div>
+      <div class="dg-nav">
+        <button type="button" class="back" id="dg-back">← 前へ</button>
+        <button type="button" class="dg-btn" id="dg-next" disabled>次へ →</button>
+      </div>
+    </section>
+
+    <section class="dg-res" id="dg-result" hidden>
+      <span class="lb">診断結果</span>
+      <h2 class="type" id="r-type"></h2>
+      <p class="catch" id="r-catch"></p>
+
+      <div class="dg-map" id="r-map"></div>
+
+      <div class="dg-scores">
+        <div><small>属人化の少なさ</small><b id="r-z"></b></div>
+        <div><small>戦略の精度</small><b id="r-s"></b></div>
+        <div><small>実行の度合い</small><b id="r-j"></b></div>
+      </div>
+      <div class="dg-formula">
+        <div class="eq">戦略 <em id="r-s2"></em>点 × 実行 <em id="r-j2"></em>点 ＝ 成果 <em id="r-k"></em>点</div>
+        <p>戦略の精度は、やることをどれだけ正しく決めたか。実行の度合いは、決めたことをどれだけやり切ったか。成果はこの2つの掛け算で決まるので、どちらかが低いと伸びません。点数は100点×100点を100点として換算しています。</p>
+      </div>
+
+      <div class="dg-block">
+        <h3>今の状態</h3>
+        <p id="r-state"></p>
+      </div>
+      <div class="dg-block">
+        <h3>この組織の伸びしろ</h3>
+        <p id="r-nobi"></p>
+      </div>
+      <div class="dg-block">
+        <h3>最初の一歩</h3>
+        <p id="r-steplead"></p>
+        <div class="dg-step" id="r-step"></div>
+      </div>
+      <div class="dg-block" id="r-qbox">
+        <h3>気になった回答</h3>
+        <p>点数を下げている回答のうち、特に低いものです。</p>
+        <ul class="dg-quotes" id="r-quotes"></ul>
+      </div>
+      <p class="dg-foot">この診断は、ノビシロが営業の支援の中で見てきた場面をもとにした簡易版です。点数は目安としてご覧ください。</p>
+
+      <form class="dg-form" id="dg-form" action="https://formspree.io/f/mvzlpndl" method="POST">
+        <h3>結果の詳しいレポートを、メールでお送りします</h3>
+        <p class="sub">回答の内容をもとに、タイプ別の解説と、最初の一歩の進め方をまとめてお届けします。</p>
+        <input type="hidden" name="_subject" id="f-subject" value="[ノビシロHP] 診断レポート希望">
+        <input type="hidden" name="_language" value="ja">
+        <input type="hidden" name="request_type" id="f-rtype" value="report">
+        <input type="hidden" name="diag_type" id="f-type">
+        <input type="hidden" name="score_zokujin" id="f-z">
+        <input type="hidden" name="score_senryaku" id="f-s">
+        <input type="hidden" name="score_jikko" id="f-j">
+        <input type="hidden" name="score_seika" id="f-k">
+        <input type="hidden" name="answers" id="f-ans">
+        <input type="hidden" name="source" id="f-src">
+        <input type="hidden" name="submitted_at" id="f-at">
+        <div class="fg">
+          <label for="f-name">お名前<span class="req">必須</span></label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="fg">
+          <label for="f-email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="fg">
+          <label for="f-company">会社名<span class="opt">任意</span></label>
+          <input type="text" id="f-company" name="company" autocomplete="organization">
+        </div>
+        <p class="notice">お送りいただいた情報は、レポートのお届けと、当社サービスに関する情報・関連資料のご案内に利用します。詳しくは<a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>をご覧ください。</p>
+        <div class="btns">
+          <button type="submit" class="dg-btn" data-rtype="report">レポートを受け取る →</button>
+          <button type="submit" class="dg-btn ghost" data-rtype="report_booking">レポート＋60分の無料診断を予約 →</button>
+        </div>
+        <p class="err" id="f-err">送信に失敗しました。お手数ですが、時間をおいて再度お試しいただくか、<a href="mailto:info@nobishiro-group.com">info@nobishiro-group.com</a> まで直接ご連絡ください。</p>
+      </form>
+
+      <div class="dg-done" id="dg-done">
+        <h3>お申込みを受け付けました</h3>
+        <p>ご入力いただいたメールアドレスに、レポートをお送りします。</p>
+        <p id="dg-done-bk" hidden>続けて、60分の無料診断の予約ページに移動します。移動しない場合は<a href="https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/" target="_blank" rel="noopener">こちらから予約</a>してください。</p>
+      </div>
+
+      <div class="dg-retry"><button type="button" id="dg-retry">もう一度診断する</button></div>
+    </section>
+  </div>
+
+  <section class="cta" id="cta">
+    <div class="in">
+      <div>
+        <h2>自社の営業や組織のこと、<br><em>まずは60分の無料診断</em>で。</h2>
+        <p>貴社の組織のノビシロを一緒に整理します。オンライン対応・契約義務なし。</p>
+      </div>
+      <div class="btns">
+        <a class="pill or" href="https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/" target="_blank" rel="noopener">無料診断を予約する →</a>
+        <a class="pill nv" href="contact.html">お問い合わせ →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="ft-top">
+    <a href="index.html"><img src="logo_white.png" alt="株式会社ノビシロ" width="260" height="74"></a>
+    <nav class="ft-nav">
+      <a href="index.html">トップ</a><a href="index.html#solution-cta">サービス</a><a href="cases.html">導入事例</a><a href="column.html">コラム</a><a href="news.html">お知らせ</a><a href="company.html">会社概要</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a><a href="site-policy.html">サイトポリシー</a>
+    </nav>
+  </div>
+  <p class="copy">© 2025-2026 Nobishiro Inc.</p>
+</footer>
+<script>
+/* CTAクリック計測（GA4イベント cta_click）。index.html と同じ仕組み */
+(function(){
+  function kind(href){
+    if(!href) return null;
+    if(href.indexOf('timerex.net')>-1) return 'booking';
+    if(href.indexOf('contact.html')>-1) return 'contact_form';
+    if(href.indexOf('note.com/')>-1) return 'sns_note';
+    if(href.indexOf('linkedin.com')>-1) return 'sns_linkedin';
+    if(href.indexOf('x.com/')>-1) return 'sns_x';
+    return null;
+  }
+  function where(a){
+    var box=a.closest('header[id], section[id], footer');
+    if(!box) return 'other';
+    return box.id || box.tagName.toLowerCase();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a) return;
+    var t=kind(a.getAttribute('href'));
+    if(!t || typeof gtag!=='function') return;
+    gtag('event','cta_click',{
+      cta_type:t,
+      cta_location:where(a),
+      cta_text:(a.getAttribute('aria-label')||a.textContent||'').replace(/\s+/g,' ').replace('→','').trim().slice(0,40),
+      transport_type:'beacon'
+    });
+  },true);
+})();
+</script>
+<script>
+/* 営業の属人化診断。回答はこの画面の中で集計し、レポート希望のときだけ Formspree に送る */
+(function(){
+  var TIMEREX='https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/';
+  // b: z=属人化 s=戦略の精度 j=実行の度合い / r=1 は逆転項目（当てはまるほど点が下がる）
+  var Q={
+    1:{b:'z',r:1,t:'売上の大きい取引先や大事な商談は、社長かエースが担当している'},
+    2:{b:'z',r:1,t:'値引きや受注の最終判断は、社長かエースがいないと止まる'},
+    3:{b:'z',t:'成果を出している人が初回の商談で何を聞いているかを、他のメンバーが言葉で説明できる'},
+    4:{b:'z',t:'提案書・見積・トーク例が、個人のPCではなく誰でも見られる場所にあり、実際に使われている'},
+    5:{b:'z',t:'新人が一人立ちするまでの期間と、その間に覚えることが決まっている（同行して見て覚える、だけではない）'},
+    6:{b:'s',t:'商談の段階ごとに、どこで何割が次に進んでいるかを数字で把握している'},
+    7:{b:'s',t:'失注の理由を「価格」「タイミング」で終わらせず、担当者以外も読める形で記録している'},
+    8:{b:'s',t:'どの顧客に、何を、どれくらいの頻度で当たるかを、会社や部署として決めている'},
+    9:{b:'s',t:'成果を出している人と他のメンバーの違いを、本人への聞き取りや商談の中身から確かめたことがある'},
+    10:{b:'s',t:'見積を出す前にお客様に聞くこと（予算・時期・決め手など）が決まっている'},
+    11:{b:'j',t:'決めたルール（例：見積を出したら○日以内に次の約束を入れる）が、号令をかけなくても3か月以上続いている'},
+    12:{b:'j',t:'会議では件数だけでなく、どの案件がどの段階で止まっているかを確認している'},
+    13:{b:'j',t:'止まっている案件に、担当者から相談される前に上司が気づける'},
+    14:{b:'j',t:'次の予定日や次の行動は、会議の直前にまとめてではなく、日々記録されている'},
+    15:{b:'j',t:'重点施策を、月に1回以上数字で振り返る場がある'}
+  };
+  var PAGES=[[1,6,11],[3,8,12],[2,7,14],[4,10,13],[5,9,15]];
+  var LB=['当てはまらない','あまり当てはまらない','どちらとも言えない','やや当てはまる','当てはまる'];
+  var BLK={s:'戦略の精度',j:'実行の度合い'};
+  var STEP={
+    s:'直近3か月の商談を段階ごとに数え、それぞれ何件が次の段階に進んだかを出してみる。',
+    j:'決めたルールを1つ選び、毎週同じ曜日に、守れていない案件を一覧で確かめる。号令ではなく、確認の場をつくる。'
+  };
+  var TYPES={
+    RU:{n:'仕組みで伸びる組織',
+      c:'全員が一定の水準で売れていて、決めたことも回っています。',
+      st:'売上や判断が特定の人に偏りすぎず、商談の進め方や数字の確認も仕組みとして回っています。全員の下限は、すでに上がっている状態です。',
+      nb:'ここから伸ばすのは、下限ではなく上限です。一人ひとりの持ち味を活かす余地と、重点を見直す速さに伸びしろがあります。市場や顧客が変わったときに、決めたことを決め直す速さが次の差になります。',
+      step:{s:'重点顧客の区分と当たり方を、半年に1回見直す場を先に決めておく。',j:'いちばん続いていないルールを1つ選び、週次会議の確認項目に入れる。'}},
+    RD:{n:'エースが勝ち続ける組織',
+      c:'成果は出ています。ただ、勝ち方が社長やエースの頭の中にあります。',
+      st:'戦略と実行は回っていて、数字も出ています。一方で、大事な商談や判断は社長・エースに集まっていて、その人が抜けると止まりやすい状態です。',
+      nb:'エースのやり方を言葉と手順にして、全員の下限を上げることです。エースが特別なことをしているとは限りません。本人も言葉にしていない「当たり前」を書き出すと、他のメンバーが真似できる部分が見えてきます。',
+      fixed:'エースの最近の受注を1件選び、初回の商談で何を聞いたかを本人に聞き取って書き出す。'},
+    LU:{n:'全員で頑張る組織',
+      c:'全員が動いています。ただ、頑張りが成果に変わりきっていません。',
+      st:'特定の人に頼りきらず、全員が営業に出ています。ただ、戦略の精度と実行の度合いの掛け算のうち、低い側が成果を小さくしています。',
+      nb:'頑張りの量は足りています。伸びしろは、掛け算の低い側にあります。低い側を上げると、同じ頑張りでも成果が変わります。'},
+    LD:{n:'社長が支える組織',
+      c:'営業が社長やエースに集中していて、数字の確認もこれからの状態です。',
+      st:'売上や大事な判断が社長・エースに集まり、戦略と実行もまだ仕組みとして回りきっていません。社長の頑張りで成り立っている状態です。',
+      nb:'4つのタイプの中で、伸びしろがいちばん大きい状態です。最初にやることは、営業の現在地を数字で見ることです。どこで止まっているかが見えると、社長が手放せる部分も見えてきます。'}
+  };
+
+  var $=function(id){return document.getElementById(id);};
+  var ans={}, page=0, last=null;
+  function ev(name,p){ if(typeof gtag==='function') gtag('event',name,p||{}); }
+
+  // 流入元（utm_* と参照元）を控えておく。保存できない環境でも診断は動く
+  (function(){
+    try{
+      var sp=new URLSearchParams(location.search), u=[];
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ if(sp.get(k)) u.push(k+'='+sp.get(k)); });
+      if(u.length) sessionStorage.setItem('dg_utm',u.join('&'));
+      if(!sessionStorage.getItem('dg_ref')) sessionStorage.setItem('dg_ref',document.referrer||'(direct)');
+    }catch(e){}
+  })();
+  function source(){
+    var u='',r='';
+    try{ u=sessionStorage.getItem('dg_utm')||''; r=sessionStorage.getItem('dg_ref')||''; }catch(e){}
+    if(!r) r=document.referrer||'(direct)';
+    return (u?u+' / ':'')+'referrer='+r;
+  }
+
+  function toTop(){
+    var y=$('dg').getBoundingClientRect().top+window.pageYOffset-(window.innerWidth<=960?128:104);
+    window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+  }
+  function answered(){ return Object.keys(ans).length; }
+  function pageDone(){ return PAGES[page].every(function(id){ return ans[id]; }); }
+
+  function progress(){
+    var pct=Math.round(answered()/15*100), rest=PAGES.length-page-1;
+    $('dg-bar').style.width=pct+'%';
+    $('dg-pct').innerHTML='<b>'+pct+'%</b> 回答済み';
+    $('dg-rem').textContent=rest>0?'残り'+rest+'ページ':'最後のページです';
+    $('dg-next').disabled=!pageDone();
+    $('dg-next').textContent=rest>0?'次へ →':'結果を見る →';
+    $('dg-back').disabled=page===0;
+  }
+
+  function render(){
+    var h='';
+    PAGES[page].forEach(function(id,i){
+      var no=page*3+i+1, q=Q[id];
+      h+='<div class="dg-q"><div class="no">Q.'+(no<10?'0':'')+no+'</div><p class="st" id="qs'+id+'">'+q.t+'</p>';
+      h+='<div class="opts" role="radiogroup" aria-labelledby="qs'+id+'">';
+      for(var v=1;v<=5;v++){
+        var k='q'+id+'_'+v;
+        h+='<input type="radio" id="'+k+'" name="q'+id+'" value="'+v+'"'+(ans[id]===v?' checked':'')+'>';
+        h+='<label for="'+k+'"><span class="n">'+v+'</span><span class="t">'+LB[v-1]+'</span></label>';
+      }
+      h+='</div></div>';
+    });
+    $('dg-page').innerHTML=h;
+    progress();
+  }
+
+  $('dg-page').addEventListener('change',function(e){
+    var m=/^q(\d+)$/.exec(e.target.name||'');
+    if(!m) return;
+    ans[+m[1]]=+e.target.value;
+    progress();
+  });
+
+  function start(){
+    $('dg-intro').hidden=true; $('dg-hero-start').hidden=true; $('dg-quiz').hidden=false;
+    page=0; render(); toTop();
+    ev('diagnosis_start');
+  }
+  $('dg-start').addEventListener('click',start);
+  $('dg-hero-start').addEventListener('click',start);
+  $('dg-back').addEventListener('click',function(){ if(page>0){ page--; render(); toTop(); } });
+  $('dg-next').addEventListener('click',function(){
+    if(!pageDone()) return;
+    if(page<PAGES.length-1){ page++; render(); toTop(); }
+    else showResult();
+  });
+  $('dg-retry').addEventListener('click',function(){
+    ans={}; page=0; last=null;
+    $('dg-form').reset(); $('dg-form').style.display=''; $('dg-done').style.display='none'; $('f-err').style.display='none';
+    $('dg-form').querySelectorAll('button[type=submit]').forEach(function(b){ b.disabled=false; });
+    $('dg-result').hidden=true; $('dg-quiz').hidden=false;
+    render(); toTop();
+  });
+
+  function adj(id){ return Q[id].r?6-ans[id]:ans[id]; }
+  function block(b){
+    var s=0;
+    for(var id in Q){ if(Q[id].b===b) s+=adj(id); }
+    return Math.round((s-5)/20*100);
+  }
+
+  function mapSvg(z,k,key){
+    var x=k<36?k/36*50:50+(k-36)/64*50, y=z<60?z/60*50:50+(z-60)/40*50;
+    var X0=40,Y0=50,W=400, px=X0+x*W/100, py=Y0+W-y*W/100;
+    var q={RU:[240,50,'end',430,78],LU:[40,50,'start',50,78],RD:[240,250,'end',430,278],LD:[40,250,'start',50,278]};
+    var s='<svg viewBox="0 0 480 500" role="img" aria-label="診断結果の位置：'+TYPES[key].n+'" xmlns="http://www.w3.org/2000/svg" font-family="Yu Gothic,Hiragino Kaku Gothic ProN,Noto Sans JP,sans-serif">';
+    s+='<rect x="40" y="50" width="400" height="400" fill="#F5F5F2"/>';
+    for(var t in q){
+      var a=q[t];
+      if(t===key) s+='<rect x="'+a[0]+'" y="'+a[1]+'" width="200" height="200" fill="#003399" fill-opacity=".09"/>';
+      s+='<text x="'+a[3]+'" y="'+a[4]+'" text-anchor="'+a[2]+'" font-size="17" font-weight="'+(t===key?'900':'700')+'" fill="'+(t===key?'#003399':'#888')+'">'+TYPES[t].n+'</text>';
+    }
+    s+='<line x1="240" y1="50" x2="240" y2="450" stroke="#003399" stroke-width="1.5"/><line x1="40" y1="250" x2="440" y2="250" stroke="#003399" stroke-width="1.5"/>';
+    s+='<text x="240" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#111">全員が一定の水準で売れる</text>';
+    s+='<text x="240" y="478" text-anchor="middle" font-size="16" font-weight="700" fill="#111">社長・エースに集中</text>';
+    s+='<text x="48" y="242" font-size="14" font-weight="700" fill="#444">戦略×実行が回っていない</text>';
+    s+='<text x="432" y="242" text-anchor="end" font-size="14" font-weight="700" fill="#444">戦略×実行が回っている</text>';
+    var lx=Math.min(Math.max(px,60),420), ly=py<90?py+34:py-18;
+    s+='<circle cx="'+px+'" cy="'+py+'" r="11" fill="#FF5722" stroke="#fff" stroke-width="3"/>';
+    s+='<text x="'+lx+'" y="'+ly+'" text-anchor="middle" font-size="16" font-weight="900" fill="#E64A1A" stroke="#fff" stroke-width="4" paint-order="stroke">あなたの会社</text>';
+    return s+'</svg>';
+  }
+
+  function showResult(){
+    var z=block('z'), s=block('s'), j=block('j'), k=Math.round(s*j/100);
+    var key=(k>=36?'R':'L')+(z>=60?'U':'D'), T=TYPES[key], low=s<=j?'s':'j';
+    var step=T.fixed||(T.step?T.step[low]:STEP[low]);
+    var lead=T.fixed?'勝ち方を言葉にするところから始めます。':
+      (s===j?'戦略の精度と実行の度合いが同じ点数のため、先に戦略の精度から手をつけます。':
+      '今回の結果では、'+BLK[low]+'（'+(low==='s'?s:j)+'点）が'+BLK[low==='s'?'j':'s']+'（'+(low==='s'?j:s)+'点）より低めです。');
+
+    $('r-type').textContent=T.n; $('r-catch').textContent=T.c;
+    $('r-map').innerHTML=mapSvg(z,k,key);
+    $('r-z').innerHTML=z+'<span>点</span>'; $('r-s').innerHTML=s+'<span>点</span>'; $('r-j').innerHTML=j+'<span>点</span>';
+    $('r-s2').textContent=s; $('r-j2').textContent=j; $('r-k').textContent=k;
+    $('r-state').textContent=T.st; $('r-nobi').textContent=T.nb;
+    $('r-steplead').textContent=lead; $('r-step').textContent=step;
+
+    var low3=Object.keys(Q).map(Number).filter(function(id){ return adj(id)<=2; })
+      .sort(function(a,b){ return adj(a)-adj(b)||a-b; }).slice(0,3);
+    $('r-qbox').hidden=!low3.length;
+    $('r-quotes').innerHTML=low3.map(function(id){
+      return '<li>「'+Q[id].t+'」<span>「'+LB[ans[id]-1]+'」と回答</span></li>';
+    }).join('');
+
+    last={key:key,name:T.n,z:z,s:s,j:j,k:k};
+    $('f-type').value=T.n; $('f-z').value=z; $('f-s').value=s; $('f-j').value=j; $('f-k').value=k;
+    $('f-ans').value=Object.keys(Q).map(Number).map(function(id){
+      return id+'. '+Q[id].t+'：'+LB[ans[id]-1]+'（'+ans[id]+'）';
+    }).join('\n');
+
+    $('dg-quiz').hidden=true; $('dg-result').hidden=false; toTop();
+    ev('diagnosis_complete',{diag_type:key,score_zokujin:z,score_senryaku:s,score_jikko:j,score_seika:k});
+  }
+
+  $('dg-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=this, btn=e.submitter, rt=(btn&&btn.getAttribute('data-rtype'))||'report';
+    if(!last) return;
+    $('f-rtype').value=rt;
+    $('f-subject').value='[ノビシロHP] 診断レポート希望'+(rt==='report_booking'?'＋予約':'')+'（'+last.name+'）';
+    $('f-src').value=source();
+    $('f-at').value=new Date(Date.now()+9*3600e3).toISOString().replace('T',' ').slice(0,16)+' JST';
+    $('f-err').style.display='none';
+    var bs=f.querySelectorAll('button[type=submit]');
+    bs.forEach(function(b){ b.disabled=true; });
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(!r.ok) throw new Error('status '+r.status);
+        ev('diagnosis_lead',{request_type:rt,diag_type:last.key});
+        f.style.display='none'; $('dg-done').style.display='block';
+        $('dg-done-bk').hidden=rt!=='report_booking';
+        if(rt==='report_booking') setTimeout(function(){ location.href=TIMEREX; },1500);
+      })
+      .catch(function(err){
+        if(window.console) console.error('Formspree error:',err);
+        $('f-err').style.display='block';
+        bs.forEach(function(b){ b.disabled=false; });
+      });
+  });
+})();
+</script>
+</body>
+</html>
