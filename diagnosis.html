@@ -206,7 +206,7 @@ footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad
 .dg-q .opts input{position:absolute;opacity:0;pointer-events:none}
 .dg-q .opts label{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;padding:12px 4px 10px;border:1.5px solid var(--rule);border-radius:6px;background:#fff;transition:.2s;text-align:center}
 .dg-q .opts label .n{font-family:var(--font-en);font-weight:800;font-size:18px;color:var(--ink-mid)}
-.dg-q .opts label .t{font-size:11px;line-height:1.4;color:var(--ink-light);font-weight:700;min-height:2.8em}
+.dg-q .opts label .t{font-size:11px;line-height:1.4;color:var(--ink-light);font-weight:700;min-height:2.8em;word-break:keep-all;overflow-wrap:anywhere}
 .dg-q .opts label:hover{border-color:var(--navy)}
 .dg-q .opts input:checked+label{background:var(--navy);border-color:var(--navy)}
 .dg-q .opts input:checked+label .n,.dg-q .opts input:checked+label .t{color:#fff}
@@ -525,6 +525,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   };
   var PAGES=[[1,6,11],[3,8,12],[2,7,14],[4,10,13],[5,9,15]];
   var LB=['当てはまらない','あまり当てはまらない','どちらとも言えない','やや当てはまる','当てはまる'];
+  var LBH=['当ては<wbr>まらない','あまり<wbr>当ては<wbr>まらない','どちらとも<wbr>言えない','やや<wbr>当てはまる','当てはまる'];
   var BLK={s:'戦略の精度',j:'実行の度合い'};
   var STEP={
     s:'直近3か月の商談を段階ごとに数え、それぞれ何件が次の段階に進んだかを出してみる。',
@@ -597,7 +598,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       for(var v=1;v<=5;v++){
         var k='q'+id+'_'+v;
         h+='<input type="radio" id="'+k+'" name="q'+id+'" value="'+v+'"'+(ans[id]===v?' checked':'')+'>';
-        h+='<label for="'+k+'"><span class="n">'+v+'</span><span class="t">'+LB[v-1]+'</span></label>';
+        h+='<label for="'+k+'"><span class="n">'+v+'</span><span class="t">'+LBH[v-1]+'</span></label>';
       }
       h+='</div></div>';
     });
