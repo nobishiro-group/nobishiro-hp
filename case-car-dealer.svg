@@ -46,7 +46,7 @@
   </g>
 
   <!-- 成約（チェック） -->
-  <g transform="translate(1040 600)">
+  <g transform="translate(950 630)">
     <circle cx="0" cy="0" r="74" fill="#FF5722"/>
     <polyline points="-32,2 -8,26 36,-24" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
