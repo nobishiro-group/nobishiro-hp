@@ -720,9 +720,9 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   };
   var TYPES={
     RU:{n:'仕組みで伸びる組織',
-      c:'全員が一定の水準で売れていて、決めたことも回っています。',
-      st:'売上や判断が特定の人に偏りすぎず、商談の進め方や数字の確認も仕組みとして回っています。全員の下限は、すでに上がっている状態です。',
-      nb:'ここから伸ばすのは、下限ではなく上限です。一人ひとりの持ち味を活かす余地と、重点を見直す速さに伸びしろがあります。市場や顧客が変わったときに、決めたことを決め直す速さが次の差になります。',
+      c:'全員の下限は上がっています。次に伸ばすのは、上限です。',
+      st:'売上や判断が特定の人に偏りすぎず、商談の進め方や数字の確認も仕組みとして回っています。',
+      nb:'ここから伸ばすのは、下限ではなく上限です。一人ひとりの持ち味を活かす余地と、重点を見直す速さに伸びしろがあります。市場や顧客が変わったときに、決めたことを決め直す速さが次の差になります。回っている組織ほど、内側からは見直す点が見えにくくなります。',
       step:{s:'重点顧客の区分と当たり方を、半年に1回見直す場を先に決めておく。',j:'いちばん続いていないルールを1つ選び、週次会議の確認項目に入れる。'}},
     RD:{n:'エースが勝ち続ける組織',
       c:'成果は出ています。ただ、勝ち方が社長やエースの頭の中にあります。',
@@ -891,7 +891,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
   // wide=true：横軸のラベルを枠の左右の外に出す（PC用）。false：枠の中（スマホ用）
   function mapSvg(z,k,key,wide){
-    var x=k<36?k/36*50:50+(k-36)/64*50, y=z<60?z/60*50:50+(z-60)/40*50;
+    var x=k<49?k/49*50:50+(k-49)/51*50, y=z<70?z/70*50:50+(z-70)/30*50;
     var X0=wide?120:40,Y0=50,W=400, VW=wide?640:480, C=X0+200, px=X0+x*W/100, py=Y0+W-y*W/100;
     var q={RU:[C,50,'end',X0+390,78],LU:[X0,50,'start',X0+10,78],RD:[C,250,'end',X0+390,278],LD:[X0,250,'start',X0+10,278]};
     var s='<svg class="'+(wide?'pc':'sp')+'" viewBox="0 0 '+VW+' 500" role="img" aria-label="診断結果の位置：'+TYPES[key].n+'" xmlns="http://www.w3.org/2000/svg" font-family="Yu Gothic,Hiragino Kaku Gothic ProN,Noto Sans JP,sans-serif">';
@@ -926,21 +926,21 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
   function showResult(){
     var z=block('z'), s=block('s'), j=block('j'), k=Math.round(s*j/100);
-    var key=(k>=36?'R':'L')+(z>=60?'U':'D'), T=TYPES[key], low=s<=j?'s':'j';
+    var key=(k>=49?'R':'L')+(z>=70?'U':'D'), T=TYPES[key], low=s<=j?'s':'j';
     var step=T.fixed||(T.step?T.step[low]:STEP[low]);
     var lead=T.fixed?'勝ち方を言葉にするところから始めます。':
       (s===j?'戦略の精度と実行の度合いが同じ点数のため、先に戦略の精度から手をつけます。':
       '今回の結果では、'+BLK[low]+'（'+(low==='s'?s:j)+'点）が'+BLK[low==='s'?'j':'s']+'（'+(low==='s'?j:s)+'点）より低めです。');
 
-    var xr=k>=36?'戦略×実行が回っている':'戦略×実行が回っていない', yr=z>=60?'全員が一定の水準で売れる':'社長・エースに集中';
+    var xr=k>=49?'戦略×実行が回っている':'戦略×実行が回っていない', yr=z>=70?'全員が一定の水準で売れる':'社長・エースに集中';
     $('r-type').textContent=T.n; $('r-catch').textContent=T.c;
     $('r-tags').innerHTML='<li><span>縦軸</span>'+yr+'</li><li><span>横軸</span>'+xr+'</li>';
     $('r-illust').innerHTML=scene(key);
     $('r-map').innerHTML=mapSvg(z,k,key,true)+mapSvg(z,k,key,false);
     $('g-s').innerHTML=gauge('戦略の精度',s); $('g-j').innerHTML=gauge('実行の度合い',j);
-    $('g-k').innerHTML=gauge('成果',k,36); $('g-z').innerHTML=gauge('属人化の少なさ',z,60);
-    $('r-xres').innerHTML='成果は<b>'+k+'点</b>（'+s+'×'+j+'÷100）。境目の36点'+(k>=36?'以上なので、図の<b>右側</b>':'未満なので、図の<b>左側</b>')+'（'+xr+'）です。境目の36点は、戦略の精度と実行の度合いがどちらも60点のときの成果です。';
-    $('r-yres').innerHTML='属人化の少なさは<b>'+z+'点</b>。境目の60点'+(z>=60?'以上なので、図の<b>上側</b>':'未満なので、図の<b>下側</b>')+'（'+yr+'）です。点数が高いほど、特定の人に頼らずに売れている状態です。';
+    $('g-k').innerHTML=gauge('成果',k,49); $('g-z').innerHTML=gauge('属人化の少なさ',z,70);
+    $('r-xres').innerHTML='成果は<b>'+k+'点</b>（'+s+'×'+j+'÷100）。境目の49点'+(k>=49?'以上なので、図の<b>右側</b>':'未満なので、図の<b>左側</b>')+'（'+xr+'）です。境目の49点は、戦略の精度と実行の度合いがどちらも70点のときの成果です。';
+    $('r-yres').innerHTML='属人化の少なさは<b>'+z+'点</b>。境目の70点'+(z>=70?'以上なので、図の<b>上側</b>':'未満なので、図の<b>下側</b>')+'（'+yr+'）です。点数が高いほど、特定の人に頼らずに売れている状態です。';
     $('r-state').textContent=T.st; $('r-nobi').textContent=T.nb;
     $('r-steplead').textContent=lead; $('r-step').textContent=step;
 
