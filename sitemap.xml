@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://nobishiro-group.com/column.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -103,6 +103,15 @@
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://nobishiro-group.com/tsuchiya-tomohiko-nobishiro-ceo-portrait.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://nobishiro-group.com/column-inexperienced-sales.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://nobishiro-group.com/imazeki-takafumi-nobishiro-coo.webp</image:loc>
     </image:image>
   </url>
   <url>
