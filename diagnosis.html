@@ -176,19 +176,11 @@ footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad
 
 /* ---------- 営業の属人化診断 ---------- */
 .dg{max-width:var(--read-w);margin:0 auto;padding:40px var(--pad-x) 24px;box-sizing:content-box}
-.dg-intro p{font-size:16px;margin-bottom:1.1em}
-.dg-axes{list-style:none;margin:24px 0 8px;display:grid;gap:10px}
-.dg-axes li{background:var(--offwhite);padding:16px 18px;font-size:15px;line-height:1.8}
-.dg-axes b{display:block;color:var(--navy);font-weight:900;font-size:15px;margin-bottom:2px}
-.dg-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 32px;font-size:14px;font-weight:700;color:var(--ink-mid)}
-.dg-meta span::before{content:"";display:inline-block;width:8px;height:8px;background:var(--orange);margin-right:8px;transform:translateY(-1px)}
 .dg-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:18px 40px;border:none;border-radius:999px;background:var(--orange-grad);color:#fff;font-family:var(--font-ja);font-weight:700;font-size:17px;cursor:pointer;transition:.3s}
 .dg-btn:hover{background:var(--orange-h)}
 .dg-btn:disabled{opacity:.4;cursor:not-allowed}
 .dg-btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
 .dg-btn.ghost:hover{background:var(--navy);color:#fff}
-.ahero .dg-btn{margin-top:28px;padding:16px 36px;font-size:16px}
-.dg-note{font-size:13px;color:var(--ink-light);margin-top:16px}
 
 /* 進捗 */
 .dg-prog{position:sticky;top:96px;z-index:5;background:#fff;padding:14px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:8px}
@@ -218,24 +210,9 @@ footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad
 .dg-nav .back:disabled{visibility:hidden}
 
 /* 結果 */
-.dg-res .lb{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--navy);padding:4px 12px}
-.dg-res h2.type{font-weight:900;font-size:clamp(28px,3.6vw,40px);line-height:1.4;color:var(--navy);margin:12px 0 8px}
-.dg-res .catch{font-size:17px;font-weight:700;line-height:1.9}
-.dg-map{margin:32px 0 8px;display:grid;grid-template-columns:1fr;gap:8px}
-.dg-map svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
-.dg-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0 8px}
-.dg-scores div{background:var(--offwhite);padding:16px 12px;text-align:center}
-.dg-scores small{display:block;font-size:12px;font-weight:700;color:var(--ink-mid)}
-.dg-scores b{font-family:var(--font-en);font-weight:800;font-size:30px;color:var(--navy)}
-.dg-scores b span{font-size:14px;margin-left:2px}
-@media (max-width:600px){.dg-scores{gap:6px}.dg-scores div{padding:14px 4px}.dg-scores small{font-size:11px}.dg-scores b{font-size:26px}}
-.dg-formula{margin:10px 0 4px;border:2px solid var(--navy);padding:20px 22px;text-align:center}
-.dg-formula .eq{font-weight:900;font-size:clamp(17px,2.2vw,22px);line-height:1.7}
-.dg-formula .eq em{font-style:normal;font-family:var(--font-en);color:var(--orange-h)}
-.dg-formula p{font-size:14px;color:var(--ink-mid);margin-top:8px;line-height:1.8;text-align:left}
 .dg-block{margin-top:40px}
 .dg-block h3{position:relative;font-weight:900;font-size:20px;line-height:1.5;margin-bottom:14px;padding-left:20px}
-.dg-block h3::before{content:"";position:absolute;left:0;top:.25em;bottom:.25em;width:5px;background:var(--navy);transform:skewX(-14deg)}
+.dg-block h3::before{content:"";position:absolute;left:0;top:.25em;bottom:.25em;width:5px;background:var(--navy);transform:skewX(-12deg)}
 .dg-block p{font-size:16px;margin-bottom:1em}
 .dg-step{background:#FFF3EE;border-left:4px solid var(--orange);padding:18px 20px;font-weight:700;font-size:16px;line-height:1.9}
 .dg-quotes{list-style:none;display:grid;gap:10px}
@@ -268,6 +245,149 @@ footer{background:var(--navy);color:#fff;padding:clamp(60px,6vw,100px) var(--pad
 .dg-retry button{background:none;border:none;font-family:var(--font-ja);font-weight:700;font-size:14px;color:var(--navy);cursor:pointer;text-decoration:underline;text-underline-offset:4px}
 .dg-foot{font-size:13px;color:var(--ink-light);margin-top:24px;line-height:1.8}
 [hidden]{display:none!important}
+
+/* ---- ヒーロー（ロゴ風の題字） ---- */
+.ahero.dg-hero .in{max-width:1080px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:center;padding:44px var(--pad-x) 64px}
+.dg-hero .eyebrow{margin-bottom:14px}
+.dg-logo{max-width:none;margin:0;line-height:1;font-size:inherit;letter-spacing:0}
+.dg-logo .pre{display:inline-block;position:relative;color:#fff;font-weight:900;font-size:clamp(17px,1.9vw,22px);padding:7px 16px 8px;margin-bottom:12px;z-index:0}
+.dg-logo .pre::before{content:"";position:absolute;inset:0;background:var(--orange);transform:skewX(-12deg);z-index:-1}
+.dg-logo .main{display:block;font-weight:900;font-size:clamp(50px,7vw,88px);letter-spacing:-.01em;color:var(--navy);line-height:1.15}
+.dg-logo .main b{position:relative;display:inline-block;color:#fff;padding:0 .14em;margin-right:.08em;z-index:0;font-weight:900}
+.dg-logo .main b::before{content:"";position:absolute;inset:.06em 0 .02em;background:var(--navy);transform:skewX(-12deg);z-index:-1}
+.dg-logo-en{font-family:var(--font-en);font-weight:800;font-size:12px;letter-spacing:.32em;color:var(--ink-light);margin-top:14px}
+.dg-hcatch{font-weight:700;font-size:clamp(16px,1.6vw,19px);line-height:1.85;margin-top:22px}
+.dg-stamps{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 30px;padding:0}
+.dg-stamps li{border:2px solid var(--navy);color:var(--navy);background:#fff;font-weight:900;font-size:14px;padding:6px 14px}
+.dg-stamps li.or{border-color:var(--orange);background:var(--orange);color:#fff}
+.dg-hero .vis svg{width:100%;height:auto;display:block}
+.dg-pulse{transform-box:fill-box;transform-origin:center;animation:dgpulse 2s ease-out infinite}
+@keyframes dgpulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+@media (max-width:860px){.ahero.dg-hero .in{grid-template-columns:1fr;gap:28px;padding:32px var(--pad-x) 48px}.dg-hero .vis{max-width:300px}}
+
+/* ---- 開始ボタン（斜めの大きな箱） ---- */
+.dg-go{position:relative;display:inline-block;border:none;background:none;padding:0 8px 8px 0;cursor:pointer;font-family:var(--font-ja)}
+.dg-go::before{content:"";position:absolute;left:8px;top:8px;right:0;bottom:0;background:var(--navy);transform:skewX(-12deg)}
+.dg-go>.bi{position:relative;display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;column-gap:28px;align-items:center;padding:16px 44px 18px 40px;color:#fff;transition:transform .15s}
+.dg-go>.bi::before{content:"";position:absolute;inset:0;background:var(--orange);transform:skewX(-12deg);z-index:-1;transition:background .15s}
+.dg-go>.bi{z-index:0}
+.dg-go .en{grid-column:1;font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.3em;text-align:left;opacity:.9}
+.dg-go .jp{grid-column:1;font-weight:900;font-size:clamp(22px,2.4vw,28px);letter-spacing:.04em;line-height:1.3}
+.dg-go .ar{grid-column:2;grid-row:1 / span 2;font-family:var(--font-en);font-weight:800;font-size:32px;line-height:1;animation:dgnudge 1.6s ease-in-out infinite}
+@keyframes dgnudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.dg-go:hover>.bi{transform:translate(4px,4px)}
+.dg-go:hover>.bi::before{background:var(--orange-h)}
+.dg-go:active>.bi{transform:translate(8px,8px)}
+.dg-go:focus-visible{outline:3px solid var(--navy);outline-offset:6px}
+@media (prefers-reduced-motion:reduce){.dg-go .ar,.dg-pulse{animation:none}}
+
+/* ---- 診断で分かること ---- */
+.dg-h{position:relative;background:var(--navy);color:#fff;font-weight:900;font-size:clamp(20px,2.4vw,26px);line-height:1.45;padding:14px 22px;margin:8px 0 22px}
+.dg-h .en{display:block;font-family:var(--font-en);font-weight:800;font-size:11px;letter-spacing:.28em;color:#FF8A65;margin-bottom:2px}
+.dg-lead{font-size:16px;line-height:1.9;margin-bottom:24px}
+.dg-lead b{color:var(--navy);font-weight:900}
+.dg-pt{border:2px solid var(--navy);margin-bottom:18px}
+.dg-pt .hd{display:flex;align-items:center;gap:14px;background:var(--navy);color:#fff;padding:8px 18px}
+.dg-pt .no{font-family:var(--font-en);font-weight:800;font-size:13px;letter-spacing:.18em}
+.dg-pt .no b{font-size:24px;color:#FF8A65;margin-left:4px;letter-spacing:0}
+.dg-pt .ax{font-weight:900;font-size:14px;background:#fff;color:var(--navy);padding:2px 10px}
+.dg-pt .bd{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:20px 22px}
+.dg-pt .bd.col{display:block}
+.dg-pt h3{font-weight:900;font-size:clamp(22px,2.8vw,30px);color:var(--navy);line-height:1.35;margin-bottom:10px}
+.dg-pt p{font-size:15px;line-height:1.85;margin:0}
+.dg-pt .vs{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;font-weight:900;color:var(--navy);text-align:center;min-width:170px}
+.dg-pt .vs i{position:relative;width:4px;height:64px;background:var(--navy)}
+.dg-pt .vs i::before,.dg-pt .vs i::after{content:"";position:absolute;left:50%;margin-left:-8px;border:8px solid transparent}
+.dg-pt .vs i::before{top:-12px;border-bottom:10px solid var(--navy);border-top:0}
+.dg-pt .vs i::after{bottom:-12px;border-top:10px solid var(--navy);border-bottom:0}
+.dg-pt .vs span:first-child{margin-bottom:6px}.dg-pt .vs span:last-child{margin-top:6px}
+.dg-pt .eqn{display:grid;grid-template-columns:1fr auto 1fr auto .7fr;align-items:stretch;gap:10px;margin:6px 0 14px}
+.dg-pt .eqn .c{border:2px solid var(--navy);padding:12px 10px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.dg-pt .eqn .c b{font-weight:900;font-size:17px;color:var(--navy)}
+.dg-pt .eqn .c small{font-size:12px;color:var(--ink-mid);line-height:1.5;margin-top:4px}
+.dg-pt .eqn .c.res{background:var(--orange);border-color:var(--orange)}
+.dg-pt .eqn .c.res b{color:#fff;font-size:20px}
+.dg-pt .eqn i{font-style:normal;font-weight:900;font-size:24px;color:var(--navy);align-self:center}
+@media (max-width:600px){
+  .dg-pt .bd{grid-template-columns:1fr;gap:16px;padding:18px 16px}
+  .dg-pt .vs{flex-direction:row;min-width:0;justify-content:center;gap:10px;font-size:12px}
+  .dg-pt .vs span:first-child,.dg-pt .vs span:last-child{margin:0}
+  .dg-pt .vs{flex-direction:column}
+  .dg-pt .vs i{height:40px}
+  .dg-pt .eqn{grid-template-columns:1fr auto 1fr;row-gap:8px}
+  .dg-pt .eqn i:nth-of-type(2){grid-column:1 / -1;justify-self:center;line-height:1}
+  .dg-pt .eqn .c.res{grid-column:1 / -1;padding:8px}
+}
+.dg-quad{margin:6px 0 8px}
+.dg-quad .yl{text-align:center;font-weight:900;font-size:14px;color:var(--navy);padding:6px 0}
+.dg-quad .cells{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:var(--navy);border:3px solid var(--navy)}
+.dg-quad .cell{background:#fff;padding:14px 14px 16px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.dg-quad .cell .il{width:100%;max-width:220px}
+.dg-quad .cell .il svg{width:100%;height:auto;display:block}
+.dg-quad .cell b{font-weight:900;font-size:17px;color:var(--navy);margin-top:6px;line-height:1.4}
+.dg-quad .cell span{font-size:13px;color:var(--ink-mid);line-height:1.6;margin-top:4px}
+.dg-quad .xl{display:flex;justify-content:space-between;gap:10px;font-weight:900;font-size:14px;color:var(--navy);padding-top:8px}
+@media (max-width:600px){.dg-quad .cell{padding:10px 6px 12px}.dg-quad .cell b{font-size:14px}.dg-quad .cell span{font-size:11px}.dg-quad .xl,.dg-quad .yl{font-size:12px}}
+.dg-startbox{text-align:center;margin:44px 0 8px;padding:32px 16px 28px;background:var(--offwhite)}
+.dg-startbox .ask{font-weight:900;font-size:clamp(20px,2.4vw,26px);color:var(--navy);margin-bottom:20px}
+.dg-note{font-size:13px;color:var(--ink-light);margin-top:18px;line-height:1.8}
+
+/* ---- 結果の見出し（箱＋イラスト） ---- */
+.dg-rhead{border:3px solid var(--navy)}
+.dg-rhead .band{background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:10px 22px;display:flex;align-items:center;gap:14px}
+.dg-rhead .band .en{font-family:var(--font-en);font-weight:800;font-size:12px;letter-spacing:.28em;color:#FF8A65}
+.dg-rhead .bx{display:grid;grid-template-columns:minmax(0,1fr) 280px}
+.dg-rhead .tx{padding:26px 26px 24px}
+.dg-rhead .pre{font-weight:700;font-size:15px;color:var(--ink-mid)}
+.dg-rhead h2.type{font-weight:900;font-size:clamp(30px,4.2vw,44px);line-height:1.3;color:var(--navy);margin:4px 0 12px;word-break:auto-phrase}
+.dg-rhead .catch{font-size:16px;font-weight:700;line-height:1.85}
+.dg-rhead .tags{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:6px}
+.dg-rhead .tags li{font-size:13px;font-weight:700;color:var(--ink-mid)}
+.dg-rhead .tags li span{display:inline-block;background:var(--navy);color:#fff;font-size:11px;padding:1px 8px;margin-right:8px}
+.dg-rhead .il{background:var(--offwhite);display:flex;align-items:flex-end;justify-content:center;padding:18px 12px 0}
+.dg-rhead .il svg{width:100%;height:auto;display:block}
+@media (max-width:700px){.dg-rhead .bx{grid-template-columns:1fr}.dg-rhead .tx{padding:20px 18px}.dg-rhead .il{padding:14px 40px 0}}
+
+/* ---- 図 ---- */
+.dg-map svg{width:100%;height:auto;display:block;margin:0 auto}
+.dg-map svg.pc{max-width:640px}
+.dg-map svg.sp{display:none;max-width:480px}
+@media (max-width:600px){.dg-map svg.pc{display:none}.dg-map svg.sp{display:block}}
+
+/* ---- 点数の内訳 ---- */
+.dg-axis{border:2px solid var(--navy);margin-bottom:14px}
+.dg-axis .hd{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;background:var(--offwhite);padding:10px 18px;border-bottom:2px solid var(--navy)}
+.dg-axis .hd .tag{background:var(--navy);color:#fff;font-weight:900;font-size:12px;padding:2px 10px;align-self:center}
+.dg-axis .hd b{font-weight:900;font-size:19px;color:var(--navy)}
+.dg-axis .hd small{font-size:14px;font-weight:700;color:var(--ink-mid)}
+.dg-axis .gs{padding:16px 18px 4px}
+.dg-axis .g{display:grid;grid-template-columns:7.5em minmax(0,1fr) 6.5em;align-items:center;gap:14px;padding:6px 0}
+.dg-axis .g .lbl{font-weight:700;font-size:14px}
+.dg-axis .g .tr{position:relative;height:12px;background:#E6E8EE}
+.dg-axis .g .tr i{display:block;height:100%;background:var(--navy)}
+.dg-axis .g.main .lbl{font-weight:900;color:var(--orange-h);font-size:15px}
+.dg-axis .g.main .tr{height:20px}
+.dg-axis .g.main .tr i{background:var(--orange)}
+.dg-axis .g .tr em{position:absolute;top:-6px;bottom:-6px;width:2px;margin-left:-1px;background:#111}
+.dg-axis .g .tr em span{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-style:normal;font-size:11px;font-weight:700;color:#111;white-space:nowrap;margin-bottom:2px}
+.dg-axis .g.main{padding-top:22px}
+.dg-axis .g .val{text-align:right;white-space:nowrap}
+.dg-axis .g .val b{font-family:var(--font-en);font-weight:800;font-size:26px;color:var(--navy)}
+.dg-axis .g.main .val b{color:var(--orange-h);font-size:32px}
+.dg-axis .g .val span{font-size:12px;font-weight:700;color:var(--ink-light);margin-left:2px}
+.dg-axis .op{font-weight:900;font-size:18px;color:var(--navy);padding-left:3em;line-height:1}
+.dg-axis .res{font-size:14px;line-height:1.85;color:var(--ink-mid);padding:8px 18px 16px;margin:0}
+.dg-axis .res b{color:var(--navy);font-weight:900}
+.dg-scnote{font-size:13px;color:var(--ink-mid);line-height:1.85;margin-top:4px}
+@media (max-width:600px){
+  .dg-axis .gs{padding:12px 14px 2px}
+  .dg-axis .g{grid-template-columns:1fr auto;grid-template-areas:"l v" "t t";gap:4px 10px}
+  .dg-axis .g .lbl{grid-area:l}.dg-axis .g .val{grid-area:v}.dg-axis .g .tr{grid-area:t}
+  .dg-axis .g.main{padding-top:6px}
+  .dg-axis .g.main .tr{margin-top:18px}
+  .dg-axis .op{padding-left:0;text-align:center}
+  .dg-axis .res{padding:8px 14px 14px}
+}
 </style>
 <!-- Google tag (gtag.js) - GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0R27R7TYYP"></script>
@@ -333,25 +453,69 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <main>
   <nav class="crumb" aria-label="パンくず"><a href="index.html">ホーム</a><span>&gt;</span>営業の属人化診断</nav>
 
-  <section class="ahero">
+  <section class="ahero dg-hero">
     <div class="in">
-      <div class="eyebrow">DIAGNOSIS</div>
-      <h1>営業の属人化診断</h1>
-      <p class="ameta"><span>全15問・約3分</span><span>結果はその場で表示（お名前やメールアドレスは不要）</span></p>
-      <button type="button" class="dg-btn" id="dg-hero-start">診断を始める →</button>
+      <div class="tx">
+        <div class="eyebrow">DIAGNOSIS</div>
+        <h1 class="dg-logo"><span class="pre"><span>営業の</span></span><span class="main"><b>属人化</b>診断</span></h1>
+        <p class="dg-logo-en">SALES DEPENDENCY CHECK</p>
+        <p class="dg-hcatch">うちの営業、社長とエース頼みになっていないか。<br>15の質問で、営業の現在地と伸びしろが分かります。</p>
+        <ul class="dg-stamps"><li class="or">無料</li><li>全15問・約3分</li><li>登録不要</li></ul>
+        <button type="button" class="dg-go" id="dg-hero-start"><span class="bi"><span class="en">START</span><span class="jp">診断を始める</span><span class="ar" aria-hidden="true">→</span></span></button>
+      </div>
+      <div class="vis" id="dg-hero-vis" aria-hidden="true"></div>
     </div>
   </section>
 
   <div class="dg" id="dg">
     <section class="dg-intro" id="dg-intro">
-      <p>15の質問に答えると、自社の営業が今どの状態にあるかを2つの軸で示します。</p>
-      <ul class="dg-axes">
-        <li><b>縦軸：営業の属人化</b>売上や大事な判断が社長・エースに集中しているか。それとも全員が一定の水準で売れるか。</li>
-        <li><b>横軸：戦略の精度×実行の度合い</b>やることを正しく決めているか（戦略の精度）と、決めたことをやり切っているか（実行の度合い）の掛け算です。どちらかが低いと成果は伸びません。</li>
-      </ul>
-      <div class="dg-meta"><span>全15問</span><span>約3分</span><span>結果はその場で表示</span></div>
-      <button type="button" class="dg-btn" id="dg-start">診断を始める →</button>
-      <p class="dg-note">「当てはまる」から「当てはまらない」までの5段階で、今の実態に近いものを選んでください。</p>
+      <h2 class="dg-h"><span class="en">WHAT YOU GET</span>この診断で分かること</h2>
+      <p class="dg-lead">15の質問に答えると、自社の営業が今どの状態にあるかを<b>2つの軸</b>で示し、<b>4つのタイプ</b>のどれに近いかが分かります。</p>
+
+      <div class="dg-pt">
+        <div class="hd"><span class="no">POINT<b>1</b></span><span class="ax">縦軸</span></div>
+        <div class="bd">
+          <div>
+            <h3>営業の属人化</h3>
+            <p>売上や大事な判断が、社長・エースに集中しているか。それとも全員が一定の水準で売れるか。</p>
+          </div>
+          <div class="vs" aria-hidden="true"><span>全員が一定の水準で売れる</span><i></i><span>社長・エースに集中</span></div>
+        </div>
+      </div>
+
+      <div class="dg-pt">
+        <div class="hd"><span class="no">POINT<b>2</b></span><span class="ax">横軸</span></div>
+        <div class="bd col">
+          <h3>戦略の精度 × 実行の度合い</h3>
+          <div class="eqn">
+            <div class="c"><b>戦略の精度</b><small>やることを正しく決めているか</small></div>
+            <i>×</i>
+            <div class="c"><b>実行の度合い</b><small>決めたことをやり切っているか</small></div>
+            <i>＝</i>
+            <div class="c res"><b>成果</b></div>
+          </div>
+          <p>掛け算なので、どちらかが低いと成果は伸びません。</p>
+        </div>
+      </div>
+
+      <h2 class="dg-h"><span class="en">4 TYPES</span>結果は4つのタイプで表示</h2>
+      <div class="dg-quad">
+        <div class="yl">↑ 全員が一定の水準で売れる</div>
+        <div class="cells">
+          <div class="cell"><div class="il" data-scene="LU"></div><b>全員で頑張る組織</b><span>全員が動いている。ただ成果に変わりきらない</span></div>
+          <div class="cell"><div class="il" data-scene="RU"></div><b>仕組みで伸びる組織</b><span>全員が売れて、決めたことも回っている</span></div>
+          <div class="cell"><div class="il" data-scene="LD"></div><b>社長が支える組織</b><span>社長の頑張りで成り立っている</span></div>
+          <div class="cell"><div class="il" data-scene="RD"></div><b>エースが勝ち続ける組織</b><span>成果は出ている。勝ち方はエースの頭の中</span></div>
+        </div>
+        <div class="yl">↓ 社長・エースに集中</div>
+        <div class="xl"><span>← 戦略×実行が回っていない</span><span>戦略×実行が回っている →</span></div>
+      </div>
+
+      <div class="dg-startbox">
+        <p class="ask">あなたの会社は、どのタイプ？</p>
+        <button type="button" class="dg-go" id="dg-start"><span class="bi"><span class="en">START</span><span class="jp">診断を始める</span><span class="ar" aria-hidden="true">→</span></span></button>
+        <p class="dg-note">全15問・約3分。結果はその場で表示され、お名前やメールアドレスは不要です。<br>「当てはまる」から「当てはまらない」までの5段階で、今の実態に近いものを選んでください。</p>
+      </div>
     </section>
 
     <section id="dg-quiz" hidden>
@@ -367,20 +531,43 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     </section>
 
     <section class="dg-res" id="dg-result" hidden>
-      <span class="lb">診断結果</span>
-      <h2 class="type" id="r-type"></h2>
-      <p class="catch" id="r-catch"></p>
-
-      <div class="dg-map" id="r-map"></div>
-
-      <div class="dg-scores">
-        <div><small>属人化の少なさ</small><b id="r-z"></b></div>
-        <div><small>戦略の精度</small><b id="r-s"></b></div>
-        <div><small>実行の度合い</small><b id="r-j"></b></div>
+      <div class="dg-rhead">
+        <div class="band"><span class="en">RESULT</span>診断結果</div>
+        <div class="bx">
+          <div class="tx">
+            <p class="pre">あなたの会社は</p>
+            <h2 class="type" id="r-type"></h2>
+            <p class="catch" id="r-catch"></p>
+            <ul class="tags" id="r-tags"></ul>
+          </div>
+          <div class="il" id="r-illust" aria-hidden="true"></div>
+        </div>
       </div>
-      <div class="dg-formula">
-        <div class="eq">戦略 <em id="r-s2"></em>点 × 実行 <em id="r-j2"></em>点 ＝ 成果 <em id="r-k"></em>点</div>
-        <p>戦略の精度は、やることをどれだけ正しく決めたか。実行の度合いは、決めたことをどれだけやり切ったか。成果はこの2つの掛け算で決まるので、どちらかが低いと伸びません。点数は100点×100点を100点として換算しています。</p>
+
+      <div class="dg-block">
+        <h3>4つのタイプの中での位置</h3>
+        <div class="dg-map" id="r-map"></div>
+      </div>
+
+      <div class="dg-block">
+        <h3>点数の内訳（どれも100点満点）</h3>
+        <div class="dg-axis">
+          <div class="hd"><span class="tag">横軸</span><b>成果</b><small>＝ 戦略の精度 × 実行の度合い</small></div>
+          <div class="gs">
+            <div class="g" id="g-s"></div>
+            <div class="op">×</div>
+            <div class="g" id="g-j"></div>
+            <div class="op">＝</div>
+            <div class="g main" id="g-k"></div>
+          </div>
+          <p class="res" id="r-xres"></p>
+        </div>
+        <div class="dg-axis">
+          <div class="hd"><span class="tag">縦軸</span><b>属人化の少なさ</b></div>
+          <div class="gs"><div class="g main" id="g-z"></div></div>
+          <p class="res" id="r-yres"></p>
+        </div>
+        <p class="dg-scnote">横軸と縦軸は別々のものを測っているため、合計点は出していません。2つの点数の組み合わせで、図の位置とタイプが決まります。成果は戦略の精度と実行の度合いの掛け算を100点満点に直したもので、両方が100点のときに100点になります。</p>
       </div>
 
       <div class="dg-block">
@@ -552,8 +739,69 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       nb:'4つのタイプの中で、伸びしろがいちばん大きい状態です。最初にやることは、営業の現在地を数字で見ることです。どこで止まっているかが見えると、社長が手放せる部分も見えてきます。'}
   };
 
+  /* ---- 猫のイラスト（円と三角だけで描いたオリジナルの下絵） ---- */
+  var NV='#003399', OR='#FF5722';
+  // x,y＝足元の位置、sc＝大きさ。o.up 両手を上げる / o.crown 王冠 / o.sweat 汗 / o.q はてな / o.happy 笑顔 / o.c 体の色
+  function cat(x,y,sc,o){
+    o=o||{}; var c=o.c||NV, w=c==='#fff', ey=w?NV:'#fff', bl=w?'#DCE3F5':'#fff';
+    var g='<g transform="translate('+x+' '+y+') scale('+sc+')">';
+    g+='<path d="M13 -8 C30 -10 31 -30 22 -39" fill="none" stroke="'+c+'" stroke-width="5" stroke-linecap="round"/>';
+    if(o.up) g+='<path d="M-11 -28 L-22 -64 M11 -28 L22 -64" stroke="'+c+'" stroke-width="6" stroke-linecap="round"/>';
+    g+='<ellipse cx="0" cy="-17" rx="15" ry="17" fill="'+c+'"/><ellipse cx="0" cy="-13" rx="8.5" ry="10" fill="'+bl+'"/>';
+    g+='<path d="M-14 -49 L-12 -66 L-2 -57 Z M14 -49 L12 -66 L2 -57 Z" fill="'+c+'"/>';
+    g+='<path d="M-11.5 -53 L-10.6 -62 L-5 -57 Z M11.5 -53 L10.6 -62 L5 -57 Z" fill="#FF8A65"/>';
+    g+='<circle cx="0" cy="-44" r="15" fill="'+c+'"/>';
+    if(o.happy) g+='<path d="M-8.5 -44 q3 -4 6 0 M2.5 -44 q3 -4 6 0" stroke="'+ey+'" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
+    else g+='<circle cx="-5.5" cy="-45" r="3.4" fill="'+ey+'"/><circle cx="5.5" cy="-45" r="3.4" fill="'+ey+'"/><circle cx="-5" cy="-44.6" r="1.7" fill="#111"/><circle cx="6" cy="-44.6" r="1.7" fill="#111"/>';
+    g+='<path d="M-2 -39.5 L2 -39.5 L0 -37.3 Z" fill="#FF8A65"/>';
+    g+='<path d="M-7 -38.5 L-15 -38 M-7 -36.5 L-14 -33.5 M7 -38.5 L15 -38 M7 -36.5 L14 -33.5" stroke="'+ey+'" stroke-width="1" opacity=".75"/>';
+    if(o.crown) g+='<path d="M-9 -58 L-10.5 -72 L-4.5 -65.5 L0 -74 L4.5 -65.5 L10.5 -72 L9 -58 Z" fill="'+OR+'"/>';
+    if(o.sweat) g+='<path d="M25 -54 q4.5 6.5 0 9 q-4.5 -2.5 0 -9Z M-26 -46 q3.5 5 0 7 q-3.5 -2 0 -7Z" fill="#7FA2F0"/>';
+    if(o.q) g+='<text x="0" y="-76" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" font-weight="900" fill="'+NV+'">?</text>';
+    return g+'</g>';
+  }
+  function arrow(x1,y1,x2,y2,c,w){
+    var dx=x2-x1, dy=y2-y1, L=Math.sqrt(dx*dx+dy*dy), ux=dx/L, uy=dy/L, hl=w*3, hw=w*1.8;
+    var bx=x2-ux*hl, by=y2-uy*hl;
+    return '<line x1="'+x1+'" y1="'+y1+'" x2="'+bx.toFixed(1)+'" y2="'+by.toFixed(1)+'" stroke="'+c+'" stroke-width="'+w+'" stroke-linecap="round"/>'+
+      '<path d="M'+x2+' '+y2+' L'+(bx-uy*hw).toFixed(1)+' '+(by+ux*hw).toFixed(1)+' L'+(bx+uy*hw).toFixed(1)+' '+(by-ux*hw).toFixed(1)+' Z" fill="'+c+'"/>';
+  }
+  var GROUND='<rect x="0" y="186" width="260" height="14" fill="#DCE3F5"/>';
+  function scene(k){
+    var s='<svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">';
+    if(k==='RU'){ // 全員が同じ大きさで、右上がりの階段を上っていく
+      s+='<polygon points="10,190 10,164 90,164 90,136 170,136 170,108 250,108 250,190" fill="#DCE3F5"/>';
+      s+=arrow(26,68,156,18,OR,5);
+      s+=cat(50,164,.85,{happy:1})+cat(130,136,.85,{happy:1})+cat(210,108,.85,{happy:1});
+    }else if(k==='RD'){ // 王冠のエースが前に。後ろの2匹は勝ち方が分からない
+      s+=GROUND+'<path d="M132 88 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="'+OR+'"/>';
+      s+=cat(182,186,.72,{q:1})+cat(228,186,.72,{q:1})+cat(80,186,1.45,{crown:1});
+    }else if(k==='LU'){ // 全員が両手を上げて頑張っている。ただ向きがばらばら
+      s+=GROUND+arrow(48,92,22,48,OR,4)+arrow(124,86,146,40,OR,4)+arrow(206,98,246,82,OR,4);
+      s+=cat(60,186,1,{up:1,sweat:1})+cat(130,186,1,{up:1,sweat:1})+cat(200,186,1,{up:1,sweat:1});
+    }else{ // LD：社長猫が一人で全員を持ち上げている
+      s+=GROUND+'<rect x="55" y="86" width="150" height="10" fill="#8FA6DE"/>';
+      s+=cat(92,86,.55,{})+cat(130,86,.55,{})+cat(168,86,.55,{});
+      s+=cat(130,186,1.4,{up:1,sweat:1});
+    }
+    return s+'</svg>';
+  }
+  function heroSvg(){
+    var s='<svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg" font-family="Yu Gothic,Hiragino Kaku Gothic ProN,Noto Sans JP,sans-serif">';
+    s+='<rect x="70" y="10" width="260" height="260" fill="#fff" stroke="'+NV+'" stroke-width="3"/>';
+    s+='<line x1="200" y1="10" x2="200" y2="270" stroke="'+NV+'" stroke-width="1.5"/><line x1="70" y1="140" x2="330" y2="140" stroke="'+NV+'" stroke-width="1.5"/>';
+    var L=[['全員で頑張る',80,34,'start'],['仕組みで伸びる',320,34,'end'],['社長が支える',80,258,'start'],['エースが勝ち続ける',320,258,'end']];
+    L.forEach(function(a){ s+='<text x="'+a[1]+'" y="'+a[2]+'" text-anchor="'+a[3]+'" font-size="13" font-weight="700" fill="#888">'+a[0]+'</text>'; });
+    s+='<circle class="dg-pulse" cx="200" cy="140" r="28" fill="none" stroke="'+OR+'" stroke-width="3"/>';
+    s+='<circle cx="200" cy="140" r="28" fill="'+OR+'"/><text x="200" y="152" text-anchor="middle" font-family="Inter,sans-serif" font-size="34" font-weight="900" fill="#fff">?</text>';
+    s+=cat(40,292,1.3,{});
+    return s+'</svg>';
+  }
+
   var $=function(id){return document.getElementById(id);};
   var ans={}, page=0, last=null;
+  $('dg-hero-vis').innerHTML=heroSvg();
+  document.querySelectorAll('[data-scene]').forEach(function(el){ el.innerHTML=scene(el.getAttribute('data-scene')); });
   function ev(name,p){ if(typeof gtag==='function') gtag('event',name,p||{}); }
 
   // 流入元（utm_* と参照元）を控えておく。保存できない環境でも診断は動く
@@ -641,26 +889,39 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     return Math.round((s-5)/20*100);
   }
 
-  function mapSvg(z,k,key){
+  // wide=true：横軸のラベルを枠の左右の外に出す（PC用）。false：枠の中（スマホ用）
+  function mapSvg(z,k,key,wide){
     var x=k<36?k/36*50:50+(k-36)/64*50, y=z<60?z/60*50:50+(z-60)/40*50;
-    var X0=40,Y0=50,W=400, px=X0+x*W/100, py=Y0+W-y*W/100;
-    var q={RU:[240,50,'end',430,78],LU:[40,50,'start',50,78],RD:[240,250,'end',430,278],LD:[40,250,'start',50,278]};
-    var s='<svg viewBox="0 0 480 500" role="img" aria-label="診断結果の位置：'+TYPES[key].n+'" xmlns="http://www.w3.org/2000/svg" font-family="Yu Gothic,Hiragino Kaku Gothic ProN,Noto Sans JP,sans-serif">';
-    s+='<rect x="40" y="50" width="400" height="400" fill="#F5F5F2"/>';
+    var X0=wide?120:40,Y0=50,W=400, VW=wide?640:480, C=X0+200, px=X0+x*W/100, py=Y0+W-y*W/100;
+    var q={RU:[C,50,'end',X0+390,78],LU:[X0,50,'start',X0+10,78],RD:[C,250,'end',X0+390,278],LD:[X0,250,'start',X0+10,278]};
+    var s='<svg class="'+(wide?'pc':'sp')+'" viewBox="0 0 '+VW+' 500" role="img" aria-label="診断結果の位置：'+TYPES[key].n+'" xmlns="http://www.w3.org/2000/svg" font-family="Yu Gothic,Hiragino Kaku Gothic ProN,Noto Sans JP,sans-serif">';
+    s+='<rect x="'+X0+'" y="50" width="400" height="400" fill="#F5F5F2"/>';
     for(var t in q){
       var a=q[t];
       if(t===key) s+='<rect x="'+a[0]+'" y="'+a[1]+'" width="200" height="200" fill="#003399" fill-opacity=".09"/>';
       s+='<text x="'+a[3]+'" y="'+a[4]+'" text-anchor="'+a[2]+'" font-size="17" font-weight="'+(t===key?'900':'700')+'" fill="'+(t===key?'#003399':'#888')+'">'+TYPES[t].n+'</text>';
     }
-    s+='<line x1="240" y1="50" x2="240" y2="450" stroke="#003399" stroke-width="1.5"/><line x1="40" y1="250" x2="440" y2="250" stroke="#003399" stroke-width="1.5"/>';
-    s+='<text x="240" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#111">全員が一定の水準で売れる</text>';
-    s+='<text x="240" y="478" text-anchor="middle" font-size="16" font-weight="700" fill="#111">社長・エースに集中</text>';
-    s+='<text x="48" y="242" font-size="14" font-weight="700" fill="#444">戦略×実行が回っていない</text>';
-    s+='<text x="432" y="242" text-anchor="end" font-size="14" font-weight="700" fill="#444">戦略×実行が回っている</text>';
-    var lx=Math.min(Math.max(px,60),420), ly=py<90?py+34:py-18;
+    s+='<line x1="'+C+'" y1="50" x2="'+C+'" y2="450" stroke="#003399" stroke-width="1.5"/><line x1="'+X0+'" y1="250" x2="'+(X0+400)+'" y2="250" stroke="#003399" stroke-width="1.5"/>';
+    s+='<text x="'+C+'" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#111">↑ 全員が一定の水準で売れる</text>';
+    s+='<text x="'+C+'" y="480" text-anchor="middle" font-size="16" font-weight="700" fill="#111">↓ 社長・エースに集中</text>';
+    if(wide){
+      s+='<text x="110" y="244" text-anchor="end" font-size="15" font-weight="700" fill="#111"><tspan x="110">← 戦略×実行が</tspan><tspan x="110" dy="21">回っていない</tspan></text>';
+      s+='<text x="530" y="244" font-size="15" font-weight="700" fill="#111"><tspan x="530">戦略×実行が →</tspan><tspan x="530" dy="21">回っている</tspan></text>';
+    }else{
+      s+='<text x="48" y="242" font-size="14" font-weight="700" fill="#444">戦略×実行が回っていない</text>';
+      s+='<text x="432" y="242" text-anchor="end" font-size="14" font-weight="700" fill="#444">戦略×実行が回っている</text>';
+    }
+    var lx=Math.min(Math.max(px,X0+20),X0+380), ly=py<90?py+34:py-18;
     s+='<circle cx="'+px+'" cy="'+py+'" r="11" fill="#FF5722" stroke="#fff" stroke-width="3"/>';
     s+='<text x="'+lx+'" y="'+ly+'" text-anchor="middle" font-size="16" font-weight="900" fill="#E64A1A" stroke="#fff" stroke-width="4" paint-order="stroke">あなたの会社</text>';
     return s+'</svg>';
+  }
+
+  // 点数のバー。thr を渡すと境目の線を引く
+  function gauge(label,v,thr){
+    var h='<div class="lbl">'+label+'</div><div class="tr"><i style="width:'+v+'%"></i>';
+    if(thr!=null) h+='<em style="left:'+thr+'%"><span>境目'+thr+'</span></em>';
+    return h+'</div><div class="val"><b>'+v+'</b><span>/100点</span></div>';
   }
 
   function showResult(){
@@ -671,10 +932,15 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       (s===j?'戦略の精度と実行の度合いが同じ点数のため、先に戦略の精度から手をつけます。':
       '今回の結果では、'+BLK[low]+'（'+(low==='s'?s:j)+'点）が'+BLK[low==='s'?'j':'s']+'（'+(low==='s'?j:s)+'点）より低めです。');
 
+    var xr=k>=36?'戦略×実行が回っている':'戦略×実行が回っていない', yr=z>=60?'全員が一定の水準で売れる':'社長・エースに集中';
     $('r-type').textContent=T.n; $('r-catch').textContent=T.c;
-    $('r-map').innerHTML=mapSvg(z,k,key);
-    $('r-z').innerHTML=z+'<span>点</span>'; $('r-s').innerHTML=s+'<span>点</span>'; $('r-j').innerHTML=j+'<span>点</span>';
-    $('r-s2').textContent=s; $('r-j2').textContent=j; $('r-k').textContent=k;
+    $('r-tags').innerHTML='<li><span>縦軸</span>'+yr+'</li><li><span>横軸</span>'+xr+'</li>';
+    $('r-illust').innerHTML=scene(key);
+    $('r-map').innerHTML=mapSvg(z,k,key,true)+mapSvg(z,k,key,false);
+    $('g-s').innerHTML=gauge('戦略の精度',s); $('g-j').innerHTML=gauge('実行の度合い',j);
+    $('g-k').innerHTML=gauge('成果',k,36); $('g-z').innerHTML=gauge('属人化の少なさ',z,60);
+    $('r-xres').innerHTML='成果は<b>'+k+'点</b>（'+s+'×'+j+'÷100）。境目の36点'+(k>=36?'以上なので、図の<b>右側</b>':'未満なので、図の<b>左側</b>')+'（'+xr+'）です。境目の36点は、戦略の精度と実行の度合いがどちらも60点のときの成果です。';
+    $('r-yres').innerHTML='属人化の少なさは<b>'+z+'点</b>。境目の60点'+(z>=60?'以上なので、図の<b>上側</b>':'未満なので、図の<b>下側</b>')+'（'+yr+'）です。点数が高いほど、特定の人に頼らずに売れている状態です。';
     $('r-state').textContent=T.st; $('r-nobi').textContent=T.nb;
     $('r-steplead').textContent=lead; $('r-step').textContent=step;
 
