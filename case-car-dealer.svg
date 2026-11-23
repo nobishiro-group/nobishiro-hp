@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="店舗スタッフがヒアリングし、店長と役割を分けて商談を進めるイメージ">
+  <rect width="1200" height="800" fill="#F5F5F2"/>
+  <polygon points="700,0 1200,0 1200,800 520,800" fill="#003399"/>
+  <polygon points="1010,0 1200,0 1200,800 1130,800" fill="#002277" opacity=".55"/>
+
+  <!-- 車 -->
+  <g transform="translate(250 480)">
+    <path d="M30 150 L30 100 Q30 80 50 76 L120 66 L190 10 Q200 2 214 2 L380 2 Q396 2 406 14 L460 76 L520 86 Q546 92 546 118 L546 150 Z" fill="#fff" stroke="#003399" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M140 72 L206 22 L292 22 L292 72 Z" fill="#E8ECF6" stroke="#003399" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M316 22 L384 22 L428 72 L316 72 Z" fill="#E8ECF6" stroke="#003399" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="500" y="100" width="34" height="14" rx="5" fill="#FF5722"/>
+    <circle cx="140" cy="150" r="46" fill="#003399"/><circle cx="140" cy="150" r="18" fill="#fff"/>
+    <circle cx="430" cy="150" r="46" fill="#003399"/><circle cx="430" cy="150" r="18" fill="#fff"/>
+  </g>
+
+  <!-- スタッフ（ヒアリング） -->
+  <g transform="translate(330 160)">
+    <circle cx="80" cy="60" r="46" fill="#003399"/>
+    <path d="M0 250 Q0 130 80 130 Q160 130 160 250 Z" fill="#003399"/>
+    <rect x="96" y="150" width="96" height="124" rx="6" fill="#fff" stroke="#003399" stroke-width="6"/>
+    <rect x="96" y="150" width="96" height="24" rx="6" fill="#FF5722"/>
+    <g fill="#C9D2EA"><rect x="110" y="190" width="68" height="10" rx="5"/><rect x="110" y="214" width="54" height="10" rx="5"/><rect x="110" y="238" width="62" height="10" rx="5"/></g>
+  </g>
+  <g transform="translate(250 50)">
+    <rect x="0" y="0" width="230" height="92" rx="46" fill="#fff" stroke="#003399" stroke-width="6"/>
+    <polygon points="170,86 214,86 232,122" fill="#fff" stroke="#003399" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="168" y="80" width="48" height="10" fill="#fff"/>
+    <text x="115" y="60" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="34" font-weight="900" fill="#003399">ご希望は？</text>
+  </g>
+
+  <!-- 分業の矢印 -->
+  <g fill="none" stroke="#FF5722" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M540 290 L720 290"/><polyline points="692,264 722,290 692,316"/>
+    <path d="M720 360 L540 360"/><polyline points="568,334 538,360 568,386"/>
+  </g>
+
+  <!-- 店長 -->
+  <g transform="translate(810 160)">
+    <circle cx="80" cy="60" r="46" fill="#fff"/>
+    <path d="M0 250 Q0 130 80 130 Q160 130 160 250 Z" fill="#fff"/>
+    <polygon points="80,140 64,170 80,230 96,170" fill="#FF5722"/>
+  </g>
+  <g transform="translate(820 440)">
+    <rect x="0" y="0" width="140" height="56" rx="28" fill="#FF5722"/>
+    <text x="70" y="39" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="30" font-weight="900" fill="#fff">店長</text>
+  </g>
+
+  <!-- 成約（チェック） -->
+  <g transform="translate(1040 600)">
+    <circle cx="0" cy="0" r="74" fill="#FF5722"/>
+    <polyline points="-32,2 -8,26 36,-24" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
