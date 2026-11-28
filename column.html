@@ -187,7 +187,7 @@ footer{background:#07348B;color:#fff;padding:clamp(60px,6vw,100px) var(--pad-x) 
 .clist .citem:nth-of-type(n+6){padding:16px 4px}
 .clist .citem:nth-of-type(n+6) .ex{display:none}
 .clist .citem:nth-of-type(n+6) .ttl{font-size:16px;font-weight:700}
-.clist.is-fold .citem:nth-of-type(n+6){display:none}
+.clist .citem.is-hide{display:none}
 .cmore{display:flex;justify-content:center;margin-top:32px}
 .cmore[hidden]{display:none}
 .cmore button{display:inline-flex;align-items:center;gap:12px;padding:15px 34px;border:2px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:700;font-size:15px;cursor:pointer;transition:background .3s,color .3s}
@@ -334,7 +334,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         <span class="go" aria-hidden="true">→</span>
       </a>
     </div>
-    <div class="cmore" hidden><button type="button" aria-expanded="false">すべてのコラムを見る</button></div>
+    <div class="cmore" hidden><button type="button">コラムをもっと見る</button></div>
 
 
     <div class="sec-head"><span class="en">NOTE</span><h2>noteでも書いています</h2></div>
@@ -392,21 +392,25 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   <p class="copy">© 2025-2026 Nobishiro Inc.</p>
 </footer>
 <script>
-/* コラム一覧：新着5本だけ見せて、残りは「すべてのコラムを見る」で同じページの中に開く。JSが動かない時は全部見える */
+/* コラム一覧：新着5本だけ見せて、残りは「コラムをもっと見る」で同じページの中に10本ずつ開く。JSが動かない時は全部見える */
 (function(){
   var list=document.querySelector('.clist'), box=document.querySelector('.cmore');
   if(!list||!box) return;
-  var n=list.querySelectorAll('.citem').length, rest=n-5;
-  if(rest<=0) return;
+  var items=list.querySelectorAll('.citem'), FIRST=5, STEP=10, shown=FIRST;
+  if(items.length<=FIRST) return;
   var btn=box.querySelector('button');
-  list.classList.add('is-fold');
-  btn.textContent='すべてのコラムを見る（ほか'+rest+'本）';
-  box.hidden=false;
+  function render(){
+    for(var i=0;i<items.length;i++){ items[i].classList.toggle('is-hide', i>=shown); }
+    var rest=items.length-shown;
+    if(rest>0){ btn.textContent='コラムをもっと見る（残り'+rest+'本）'; box.hidden=false; }
+    else { box.hidden=true; }
+  }
   btn.addEventListener('click',function(){
-    list.classList.remove('is-fold');
-    btn.setAttribute('aria-expanded','true');
-    box.hidden=true;
+    var first=items[shown];
+    shown+=STEP; render();
+    if(first) first.focus({preventScroll:true});
   });
+  render();
 })();
 </script>
 <script>
