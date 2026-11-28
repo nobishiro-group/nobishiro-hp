@@ -402,7 +402,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   function render(){
     for(var i=0;i<items.length;i++){ items[i].classList.toggle('is-hide', i>=shown); }
     var rest=items.length-shown;
-    if(rest>0){ btn.textContent='コラムをもっと見る（残り'+rest+'本）'; box.hidden=false; }
+    if(rest>0){ box.hidden=false; }
     else { box.hidden=true; }
   }
   btn.addEventListener('click',function(){
