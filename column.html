@@ -166,8 +166,12 @@ footer{background:#07348B;color:#fff;padding:clamp(60px,6vw,100px) var(--pad-x) 
 .nmore a{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--navy)}
 .nmore a::after{content:"↗";font-family:var(--font-en)}
 .nmore a:hover{text-decoration:underline;text-underline-offset:4px}
-@media (max-width:860px){.nlist{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.nlist{grid-template-columns:1fr}}
+/* スマホ・タブレットは縦に積まず、横にスワイプする1列にする（9件並べても縦に伸びない） */
+@media (max-width:860px){
+  .nlist{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 calc(var(--pad-x) * -1);padding:0 var(--pad-x) 14px;scroll-padding-left:var(--pad-x)}
+  .ncard{scroll-snap-align:start}
+}
+@media (max-width:560px){.nlist{grid-auto-columns:80%;gap:16px}.ncard .ttl{font-size:15px}}
 
 /* ---------- HPオリジナルのコラム一覧 ---------- */
 .clist{border-top:2px solid var(--navy)}
@@ -179,6 +183,17 @@ footer{background:#07348B;color:#fff;padding:clamp(60px,6vw,100px) var(--pad-x) 
 .citem:hover .ttl{color:var(--navy)}
 .citem:hover .go{transform:translateX(4px)}
 @media (max-width:600px){.citem{grid-template-columns:1fr auto;padding:22px 2px}.citem time{grid-column:1/-1}.citem .ttl{font-size:16px}}
+/* 新着5本より前の記事：最初は畳んでおき、開いたら日付とタイトルだけの1行で並べる */
+.clist .citem:nth-of-type(n+6){padding:16px 4px}
+.clist .citem:nth-of-type(n+6) .ex{display:none}
+.clist .citem:nth-of-type(n+6) .ttl{font-size:16px;font-weight:700}
+.clist.is-fold .citem:nth-of-type(n+6){display:none}
+.cmore{display:flex;justify-content:center;margin-top:32px}
+.cmore[hidden]{display:none}
+.cmore button{display:inline-flex;align-items:center;gap:12px;padding:15px 34px;border:2px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:700;font-size:15px;cursor:pointer;transition:background .3s,color .3s}
+.cmore button::after{content:"↓";font-family:var(--font-en);font-weight:800}
+.cmore button:hover{background:var(--navy);color:#fff}
+@media (max-width:600px){.clist .citem:nth-of-type(n+6){padding:14px 2px}.clist .citem:nth-of-type(n+6) .ttl{font-size:15px}.cmore button{width:100%;justify-content:center}}
 
 /* ---------- header nav（5項目） ---------- */
 .gnav a{white-space:nowrap}
@@ -261,7 +276,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   <div class="wrap">
     <div class="sec-head"><span class="en">COLUMN</span><h2>新着のコラム</h2></div>
     <div class="clist">
-      <!-- HPオリジナルの新しい記事は、この下の先頭に a.citem を1つ足す。手順はリポジトリの CLAUDE.md -->
+      <!-- HPオリジナルの新しい記事は、この下の先頭に a.citem を1つ足す。6本目から先は自動で「すべてのコラムを見る」の中に入る。手順はリポジトリの CLAUDE.md -->
       <a class="citem" href="column-inexperienced-sales.html">
         <time datetime="2026-11-23">2026.11.23</time>
         <div>
@@ -311,13 +326,14 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         <span class="go" aria-hidden="true">→</span>
       </a>
     </div>
+    <div class="cmore" hidden><button type="button" aria-expanded="false">すべてのコラムを見る</button></div>
 
 
     <div class="sec-head"><span class="en">NOTE</span><h2>noteでも書いています</h2></div>
     <div class="notebox">
       <p class="lead2">外部サイトのnoteに、マガジン「ノビシロのない組織は、ない。」を書いています。記事はnoteのページで開きます。</p>
       <div class="nlist">
-        <!-- note の新しい記事は、この下の先頭に a.ncard を1つ足す（3件まで。4件目からは一番古いものを消す） -->
+        <!-- note の新しい記事は、この下の先頭に a.ncard を1つ足す（9件まで。10件目からは一番古いものを消す） -->
         <a class="ncard" href="https://note.com/nobishiro_ceo/n/n9130f978719a" target="_blank" rel="noopener">
           <div class="ph"><img src="https://assets.st-note.com/production/uploads/images/336399534/rectangle_large_type_2_0bcd91fe1b15cf331ece46bd78614afc.png?width=800" alt="" width="800" height="419" loading="lazy"></div>
           <div class="meta"><span class="src">note ↗</span><span>2026.11.15</span></div>
@@ -362,6 +378,24 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   </div>
   <p class="copy">© 2025-2026 Nobishiro Inc.</p>
 </footer>
+<script>
+/* コラム一覧：新着5本だけ見せて、残りは「すべてのコラムを見る」で同じページの中に開く。JSが動かない時は全部見える */
+(function(){
+  var list=document.querySelector('.clist'), box=document.querySelector('.cmore');
+  if(!list||!box) return;
+  var n=list.querySelectorAll('.citem').length, rest=n-5;
+  if(rest<=0) return;
+  var btn=box.querySelector('button');
+  list.classList.add('is-fold');
+  btn.textContent='すべてのコラムを見る（ほか'+rest+'本）';
+  box.hidden=false;
+  btn.addEventListener('click',function(){
+    list.classList.remove('is-fold');
+    btn.setAttribute('aria-expanded','true');
+    box.hidden=true;
+  });
+})();
+</script>
 <script>
 /* CTAクリック計測（GA4イベント cta_click）。index.html と同じ仕組み */
 (function(){
