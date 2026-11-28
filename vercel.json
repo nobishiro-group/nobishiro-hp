@@ -1,0 +1,144 @@
+{
+  "redirects": [
+    {
+      "source": "/li/tsuchiya{/}?",
+      "destination": "/?utm_source=linkedin&utm_medium=social&utm_content=profile-tsuchiya",
+      "permanent": false
+    },
+    {
+      "source": "/li/imazeki{/}?",
+      "destination": "/?utm_source=linkedin&utm_medium=social&utm_content=profile-imazeki",
+      "permanent": false
+    },
+    {
+      "source": "/li/dm{/}?",
+      "destination": "/?utm_source=linkedin&utm_medium=social&utm_content=dm",
+      "permanent": false
+    },
+    {
+      "source": "/x{/}?",
+      "destination": "/?utm_source=x&utm_medium=social&utm_content=profile",
+      "permanent": false
+    },
+    {
+      "source": "/note{/}?",
+      "destination": "/?utm_source=note&utm_medium=social&utm_content=profile",
+      "permanent": false
+    },
+    {
+      "source": "/fb{/}?",
+      "destination": "/?utm_source=facebook&utm_medium=social&utm_content=profile-tsuchiya",
+      "permanent": false
+    },
+    {
+      "source": "/li/top{/}?",
+      "destination": "/?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/sales{/}?",
+      "destination": "/column-president-sales.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/pm{/}?",
+      "destination": "/column-playing-manager.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/delegate{/}?",
+      "destination": "/column-delegation.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/closing{/}?",
+      "destination": "/column-delegate-closing.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/leader{/}?",
+      "destination": "/column-put-into-words.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/followup{/}?",
+      "destination": "/column-estimate-followup.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/newbie{/}?",
+      "destination": "/column-inexperienced-sales.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/lcs{/}?",
+      "destination": "/case-lcs.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/ad{/}?",
+      "destination": "/case-ad-agency.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/li/car{/}?",
+      "destination": "/case-car-dealer.html?utm_source=linkedin&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/top{/}?",
+      "destination": "/?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/sales{/}?",
+      "destination": "/column-president-sales.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/pm{/}?",
+      "destination": "/column-playing-manager.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/delegate{/}?",
+      "destination": "/column-delegation.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/closing{/}?",
+      "destination": "/column-delegate-closing.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/leader{/}?",
+      "destination": "/column-put-into-words.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/followup{/}?",
+      "destination": "/column-estimate-followup.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/newbie{/}?",
+      "destination": "/column-inexperienced-sales.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/lcs{/}?",
+      "destination": "/case-lcs.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/ad{/}?",
+      "destination": "/case-ad-agency.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    },
+    {
+      "source": "/x/car{/}?",
+      "destination": "/case-car-dealer.html?utm_source=x&utm_medium=social&utm_content=post",
+      "permanent": false
+    }
+  ]
+}
