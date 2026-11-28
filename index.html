@@ -164,8 +164,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   /* ===== BRAND TOKENS — ノビシロ レギュレーション準拠 ===== */
-  --navy:     #003399;       /* Royal Navy (Primary) */
-  --navy-h:   #002277;       /* Navy Hover */
+  --navy:     #07348B;       /* Royal Navy (Primary) */
+  --navy-h:   #052A70;       /* Navy Hover */
   --black:    #000000;       /* K100 (was #111111 Rich Black — 視認性のため純黒に変更) */
   --white:    #FFFFFF;       /* Pure White */
   --offwhite: #F5F5F2;       /* Off White */
@@ -175,10 +175,10 @@
   --orange-grad-hover:  linear-gradient(180deg, #E64A1A 0%, #C53D14 100%);
   --orange-shadow:      0 1px 0 rgba(255,255,255,.18) inset, 0 8px 24px rgba(255,87,34,.32), 0 2px 6px rgba(255,87,34,.18);
   --orange-shadow-hover:0 1px 0 rgba(255,255,255,.08) inset, 0 2px 8px rgba(255,87,34,.22), 0 1px 2px rgba(255,87,34,.14);
-  --navy-grad:          linear-gradient(180deg, #1F4FA8 0%, #003399 50%, #002277 100%);
-  --navy-grad-hover:    linear-gradient(180deg, #002277 0%, #001E68 100%);
-  --navy-shadow:        0 1px 0 rgba(255,255,255,.18) inset, 0 8px 24px rgba(0,51,153,.32), 0 2px 6px rgba(0,51,153,.18);
-  --navy-shadow-hover:  0 1px 0 rgba(255,255,255,.08) inset, 0 2px 8px rgba(0,51,153,.22), 0 1px 2px rgba(0,51,153,.14);
+  --navy-grad:          linear-gradient(180deg, #1C4792 0%, #07348B 50%, #052A70 100%);
+  --navy-grad-hover:    linear-gradient(180deg, #052A70 0%, #041F55 100%);
+  --navy-shadow:        0 1px 0 rgba(255,255,255,.18) inset, 0 8px 24px rgba(7,52,139,.32), 0 2px 6px rgba(7,52,139,.18);
+  --navy-shadow-hover:  0 1px 0 rgba(255,255,255,.08) inset, 0 2px 8px rgba(7,52,139,.22), 0 1px 2px rgba(7,52,139,.14);
   /* ===== Legacy aliases — backward compatibility ===== */
   --bg:       var(--white);
   --bg-sub:   var(--offwhite);
@@ -250,7 +250,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 #hdr.scrolled {
   height: 72px;
   background: rgba(255,255,255,.82);
-  border-bottom: 1px solid rgba(0,51,153,.1);
+  border-bottom: 1px solid rgba(7,52,139,.1);
 }
 #hdr.scrolled .logo img { height: 60px; }
 /* お問い合わせセクション到達時：薄く（被り防止） */
@@ -387,7 +387,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* モバイルメニュー（半透明・後ろのコンテンツが透けて見える） */
 .mobile-menu {
   position: fixed; inset: 0;
-  background: rgba(0, 51, 153, 0.78);
+  background: rgba(7, 52, 139, 0.78);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   z-index: 240;
@@ -453,7 +453,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 96px var(--pad-x) 0;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(45deg, #001E5C 0%, #003399 50%, #0F4FA8 80%, #1F5FBC 100%);
+  background: linear-gradient(45deg, #052A70 0%, #07348B 50%, #1C4792 80%, #2A58A6 100%);
   color: #fff;
 }
 .hero-bg-lines {
@@ -1791,7 +1791,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ============================================================
    FOOTER
 ============================================================ */
-footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var(--pad-x) 48px; }
+footer { background: #07348B; color:#fff; padding: clamp(60px,6vw,100px) var(--pad-x) 48px; }
 .footer-top {
   max-width:var(--max-w); margin:0 auto;
   display: flex; flex-direction: column; align-items: center;
@@ -2010,8 +2010,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 }
 /* Placeholder when SVG not yet downloaded */
 .problem-illust.placeholder {
-  background: rgba(0,51,153,.04);
-  border: 1px dashed rgba(0,51,153,.2);
+  background: rgba(7,52,139,.04);
+  border: 1px dashed rgba(7,52,139,.2);
   font-size: 14px;
   color: var(--ink-light);
   letter-spacing: .04em;
@@ -2102,8 +2102,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 /* === エビデンスデータ表示（属人化＝中核課題、付加価値額の比較） === */
 .why-data-block {
   background: transparent;
-  border-top: 1px solid rgba(0,51,153,.18);
-  border-bottom: 1px solid rgba(0,51,153,.18);
+  border-top: 1px solid rgba(7,52,139,.18);
+  border-bottom: 1px solid rgba(7,52,139,.18);
   padding: 28px 4px 24px;
   margin-bottom: 28px;
 }
@@ -2159,7 +2159,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 }
 .why-bar-track {
   height: 14px;
-  background: rgba(0,51,153,.08);
+  background: rgba(7,52,139,.08);
   border-radius: 999px;
   overflow: hidden;
   position: relative;
@@ -2175,7 +2175,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 }
 .why-bar-low {
   width: 36%;
-  background: rgba(0,51,153,.28);
+  background: rgba(7,52,139,.28);
 }
 .why-bar-value {
   font-family: var(--font-en);
@@ -2280,7 +2280,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   height: 48px;
   border-radius: 50%;
   background: rgba(255,255,255,.92);
-  border: 1px solid rgba(0,51,153,.15);
+  border: 1px solid rgba(7,52,139,.15);
   color: var(--navy);
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
@@ -2300,7 +2300,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 #back-to-top:hover {
   background: var(--navy);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(0,51,153,.18);
+  box-shadow: 0 8px 24px rgba(7,52,139,.18);
 }
 #back-to-top svg {
   width: 18px; height: 18px;
@@ -2390,8 +2390,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   width: auto; height: auto;
 }
 .mistake-illust.placeholder {
-  background: rgba(0,51,153,.04);
-  border: 1px dashed rgba(0,51,153,.2);
+  background: rgba(7,52,139,.04);
+  border: 1px dashed rgba(7,52,139,.2);
   font-size: 14px;
   color: var(--ink-light);
   letter-spacing: .04em;
@@ -2735,7 +2735,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 }
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0,51,153,.10);
+  box-shadow: 0 8px 32px rgba(7,52,139,.10);
 }
 .service-card-illust {
   height: 180px;
@@ -2749,8 +2749,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 }
 .service-card-illust.placeholder {
   width: 100%;
-  background: rgba(0,51,153,.04);
-  border: 1px dashed rgba(0,51,153,.2);
+  background: rgba(7,52,139,.04);
+  border: 1px dashed rgba(7,52,139,.2);
   font-size: 14px;
   color: var(--ink-light);
   letter-spacing: .04em;
@@ -2803,8 +2803,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 }
 .reason-card-illust.placeholder {
   width: 100%;
-  background: rgba(0,51,153,.04);
-  border: 1px dashed rgba(0,51,153,.2);
+  background: rgba(7,52,139,.04);
+  border: 1px dashed rgba(7,52,139,.2);
   font-size: 14px;
   color: var(--ink-light);
   letter-spacing: .04em;
@@ -2867,7 +2867,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   margin: 0 auto 22px;
   width: 96px; height: 96px;
   color: var(--navy);
-  background: rgba(0,51,153,.04);
+  background: rgba(7,52,139,.04);
   border-radius: 50%;
 }
 .flow-card-illust svg {
@@ -3031,7 +3031,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 /* === NEWS（お知らせ・掲載情報／独立セクション） === */
 .news-list { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--rule); }
 .news-item { display: block; padding: 26px 6px; border-bottom: 1px solid var(--rule); transition: background .3s; }
-a.news-item:hover { background: rgba(0,51,153,.04); }
+a.news-item:hover { background: rgba(7,52,139,.04); }
 a.news-item:hover .news-title { color: var(--navy); }
 .news-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
 .news-date { font-family: var(--font-en); font-weight: 500; font-size: 13px; color: var(--ink-light); letter-spacing: .04em; }

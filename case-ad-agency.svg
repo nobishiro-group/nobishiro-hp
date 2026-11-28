@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="営業メンバー全員が同じヒアリングシートを使い、案件化率が上がったイメージ">
   <rect width="1200" height="800" fill="#F5F5F2"/>
-  <polygon points="760,0 1200,0 1200,800 580,800" fill="#003399"/>
-  <polygon points="1050,0 1200,0 1200,800 1150,800" fill="#002277" opacity=".55"/>
+  <polygon points="760,0 1200,0 1200,800 580,800" fill="#07348B"/>
+  <polygon points="1050,0 1200,0 1200,800 1150,800" fill="#052A70" opacity=".55"/>
 
   <!-- 問いかけ -->
   <g transform="translate(240 70)">
-    <rect x="0" y="0" width="300" height="96" rx="48" fill="#fff" stroke="#003399" stroke-width="6"/>
-    <polygon points="196,90 240,90 250,128" fill="#fff" stroke="#003399" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="0" y="0" width="300" height="96" rx="48" fill="#fff" stroke="#07348B" stroke-width="6"/>
+    <polygon points="196,90 240,90 250,128" fill="#fff" stroke="#07348B" stroke-width="6" stroke-linejoin="round"/>
     <rect x="194" y="84" width="48" height="10" fill="#fff"/>
-    <text x="150" y="62" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="36" font-weight="900" fill="#003399">本当の目的は？</text>
+    <text x="150" y="62" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="36" font-weight="900" fill="#07348B">本当の目的は？</text>
   </g>
 
   <!-- 営業メンバー3人（全員が同じシート） -->
   <defs><g id="m">
-    <circle cx="70" cy="52" r="40" fill="#003399"/>
-    <path d="M0 220 Q0 112 70 112 Q140 112 140 220 Z" fill="#003399"/>
-    <rect x="82" y="128" width="80" height="104" rx="6" fill="#fff" stroke="#003399" stroke-width="5"/>
+    <circle cx="70" cy="52" r="40" fill="#07348B"/>
+    <path d="M0 220 Q0 112 70 112 Q140 112 140 220 Z" fill="#07348B"/>
+    <rect x="82" y="128" width="80" height="104" rx="6" fill="#fff" stroke="#07348B" stroke-width="5"/>
     <rect x="82" y="128" width="80" height="20" rx="6" fill="#FF5722"/>
     <g fill="#C9D2EA"><rect x="94" y="162" width="56" height="9" rx="4"/><rect x="94" y="182" width="44" height="9" rx="4"/><rect x="94" y="202" width="50" height="9" rx="4"/></g>
   </g></defs>
